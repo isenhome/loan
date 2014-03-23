@@ -12,12 +12,12 @@ namespace Loan.Test
     {
         static void Main(string[] args)
         {
-            UserDao dao = new UserDao();
-            Account info = new Account();
-            info.ID = 2;
-            info.NAME = "isenhome";
-            var result = dao.Insert(info);
-            Console.Read();
+            //UserDao dao = new UserDao();
+            //Account info = new Account();
+            //info.ID = 2;
+            //info.NAME = "isenhome";
+            //var result = dao.Insert(info);
+            //Console.Read();
         }
     }
 }

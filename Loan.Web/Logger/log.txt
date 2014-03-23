@@ -3,3 +3,50 @@
 登录时发生异常。登录用户名：pkwblack；错误信息：未将对象引用设置到对象的实例。
 2014-03-23 15:49:21,641 [23] INFO  Loan.Logic.UserLogic [(null)] - 
 登录时发生异常。登录用户名：pkwblack；错误信息：未将对象引用设置到对象的实例。
+
+2014-03-23 16:35:28,995 [8] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：未将对象引用设置到对象的实例。
+
+2014-03-23 16:38:52,476 [10] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：未将对象引用设置到对象的实例。
+2014-03-23 16:41:59,512 [20] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：未将对象引用设置到对象的实例。
+
+2014-03-23 16:54:54,826 [10] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：Keyword not supported.
+参数名: command logging
+
+2014-03-23 16:58:46,947 [6] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：Keyword not supported.
+参数名: command logging
+
+2014-03-23 17:04:53,245 [11] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：Keyword not supported.
+参数名: command logging
+2014-03-23 17:07:44,760 [17] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：Keyword not supported.
+参数名: command logging
+
+2014-03-23 17:13:42,313 [11] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：Unable to connect to any of the specified MySQL hosts.
+
+2014-03-23 17:17:46,403 [10] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：Unable to connect to any of the specified MySQL hosts.
+
+2014-03-23 17:19:48,772 [10] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：Unable to connect to any of the specified MySQL hosts.
+2014-03-23 17:21:33,713 [14] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：Unable to connect to any of the specified MySQL hosts.
+
+2014-03-23 17:27:07,855 [13] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：Unable to connect to any of the specified MySQL hosts.
+
+2014-03-23 17:27:38,087 [10] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：Unable to connect to any of the specified MySQL hosts.
+
+2014-03-23 17:28:52,657 [6] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：Unable to connect to any of the specified MySQL hosts.
+
+2014-03-23 17:29:46,819 [12] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：Unable to connect to any of the specified MySQL hosts.
+

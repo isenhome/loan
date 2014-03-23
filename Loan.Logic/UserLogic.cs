@@ -39,7 +39,7 @@ namespace Loan.Logic
             }
             catch (Exception ex)
             {
-                _logger.Info(string.Format("登录时发生异常。登录用户名：{0}；错误信息：{1}", query.UserName, ex.Message));
+                _logger.Error(string.Format("登录时发生异常。登录用户名：{0}；错误信息：{1}", query.UserName, ex.Message));
                 return false;
             }
         }

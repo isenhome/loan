@@ -22,11 +22,11 @@ namespace Loan.Core
             }
         }
 
-        public static string SqlDB
+        public static string MySqlDB
         {
             get
             {
-                return ConfigurationManager.ConnectionStrings["SqlDB"].ToString();
+                return ConfigurationManager.ConnectionStrings["MySqlDB"].ToString();
             }
         }
 

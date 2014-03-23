@@ -29,6 +29,11 @@ namespace Loan.Data
         /// <returns></returns>
         public User Get(UserQuery query)
         {
+            MySql.Data.MySqlClient.MySqlConnection conn = new MySql.Data.MySqlClient.MySqlConnection("server = localhost; user id = root; password = 123456; database = loan");
+            conn.Open(); 
+            conn.Close();
+            conn.Dispose();
+
             var sql = PetaPoco.Sql.Builder.Append("SELECT * FROM users")
                                           .Append("WHERE UserName=@0", query.UserName)
                                           .Append("AND status=@0", ObjectExtension.TryInt(GlobalConst.Status.Normal));

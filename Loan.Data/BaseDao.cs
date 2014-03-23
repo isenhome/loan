@@ -5,10 +5,9 @@ using System.Text;
 using System.Threading.Tasks;
 using Loan.Core;
 using System.IO;
-using System.Data.SQLite;
 using System.Data.Sql;
 using System.Data.Common;
-using System.Data.SqlClient;
+using MySql.Data.MySqlClient;
 
 namespace Loan.Data
 {
@@ -21,18 +20,17 @@ namespace Loan.Data
             {
                 if (_db == null)
                 {
-                    _db = new PetaPoco.Database(ConfigurationHelper.SqlDB, sqliteProvider);
+                    _db = new PetaPoco.Database("MySqlDB");
                 }
                 return _db;
             }
         }
 
-        private new DbProviderFactory sqliteProvider
+        private DbProviderFactory MySqlProvider
         {
             get
             {
-                //return DbProviderFactories.GetFactory(new SQLiteConnection(ConfigurationHelper.SqliteDB));
-                return DbProviderFactories.GetFactory(new SqlConnection(ConfigurationHelper.SqlDB));
+                return DbProviderFactories.GetFactory(new MySqlConnection(ConfigurationHelper.MySqlDB));
             }
         }
     }
