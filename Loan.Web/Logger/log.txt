@@ -1,0 +1,5 @@
+
+2014-03-23 15:45:43,017 [6] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：未将对象引用设置到对象的实例。
+2014-03-23 15:49:21,641 [23] INFO  Loan.Logic.UserLogic [(null)] - 
+登录时发生异常。登录用户名：pkwblack；错误信息：未将对象引用设置到对象的实例。
