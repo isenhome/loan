@@ -8,18 +8,22 @@ namespace Loan.Web.Controllers
 {
     public class MainPageController : Controller
     {
-        //
-        // GET: /MainPage/
-
+        /// <summary>
+        /// 加载首页（竖排）
+        /// </summary>
+        /// <returns></returns>
         public ActionResult Index()
         {
-            ViewBag.Title = "青蚨信贷";
-            ViewBag.PageTiTle = "页面标题";
-            ViewBag.PageTiTleDescription = "页面说明";
-            ViewBag.BreadcrumbItem1 = "功能模块名";
-            ViewBag.BreadcrumbItem2 = "功能名称";
             return View();
         }
 
+        /// <summary>
+        /// 加载首页（横排）
+        /// </summary>
+        /// <returns></returns>
+        public ActionResult Index_Horizontal()
+        {
+            return View();
+        }
     }
 }

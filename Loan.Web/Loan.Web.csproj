@@ -1997,13 +1997,6 @@
     <Content Include="assets\scripts\ui-nouisliders.js" />
     <Content Include="assets\scripts\ui-toastr.js" />
     <Content Include="assets\scripts\ui-tree.js" />
-    <Content Include="bootstrap\css\bootstrap-docs.css" />
-    <Content Include="bootstrap\css\bootstrap.css" />
-    <Content Include="bootstrap\css\prettify.css" />
-    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.svg" />
-    <Content Include="bootstrap\js\application.js" />
-    <Content Include="bootstrap\js\google-code-prettify\prettify.js" />
-    <Content Include="bootstrap\js\holder.js" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -2020,7 +2013,6 @@
     <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="Content\themes\base\jquery-ui.css" />
     <Content Include="Global.asax" />
-    <Content Include="Scripts\ValidationSummary2.js" />
     <Content Include="Scripts\ValidationSummary.js" />
     <Content Include="App_Config\appSettings.config" />
     <Content Include="App_Config\Log4Net.config" />
@@ -2309,6 +2301,7 @@
     <Content Include="Views\MainPage\Index.cshtml" />
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
+    <Content Include="Views\MainPage\Index_Horizontal.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />
@@ -2333,11 +2326,6 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="Views\Account\Login3.cshtml" />
-  </ItemGroup>
-  <ItemGroup>
-    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.eot" />
-    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.ttf" />
-    <Content Include="bootstrap\fonts\glyphicons-halflings-regular.woff" />
   </ItemGroup>
   <PropertyGroup>
     <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
