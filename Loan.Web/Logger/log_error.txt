@@ -1,59 +1,15 @@
 
 [Header]
-2014-03-23 17:44:20
-登录时发生异常。登录用户名：pkwblack；错误信息：Unable to connect to any of the specified MySQL hosts.
+[Footer]
 
 [Header]
-2014-03-23 19:57:25
-登录时发生异常。登录用户名：pkwblack；错误信息：Unable to connect to any of the specified MySQL hosts.
+[Footer]
 
 [Header]
-2014-03-23 19:59:46
-登录时发生异常。登录用户名：pkwblack；错误信息：Unable to connect to any of the specified MySQL hosts.
+[Footer]
 
 [Header]
-2014-03-23 20:06:36
-登录时发生异常。登录用户名：pkwblack；错误信息：在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
-
-[Header]
-2014-03-23 20:13:12
-登录时发生异常。登录用户名：pkwblack；错误信息：Unable to connect to any of the specified MySQL hosts.
-
-[Header]
-2014-03-23 20:19:14
-登录时发生异常。登录用户名：pkwblack；错误信息：不支持关键字: “port”。
-
-[Header]
-2014-03-23 20:20:58
-登录时发生异常。登录用户名：pkwblack；错误信息：不支持关键字: “port”。
-
-[Header]
-2014-03-23 20:28:47
-登录时发生异常。登录用户名：pkwblack；错误信息：不支持关键字: “port”。
-2014-03-23 20:30:56
-登录时发生异常。登录用户名：pkwblack；错误信息：不支持关键字: “port”。
-2014-03-23 20:32:52
-登录时发生异常。登录用户名：pkwblack；错误信息：不支持关键字: “port”。
-
-[Header]
-2014-03-23 20:34:57
-登录时发生异常。登录用户名：pkwblack；错误信息：在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
-
-[Header]
-2014-03-23 20:53:36
-登录时发生异常。登录用户名：pkwblack；错误信息：在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
-
-[Header]
-2014-03-23 20:55:06
-登录时发生异常。登录用户名：pkwblack；错误信息：在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
-
-[Header]
-2014-03-23 21:05:51
-登录时发生异常。登录用户名：pkwblack；错误信息：在与 SQL Server 建立连接时出现与网络相关的或特定于实例的错误。未找到或无法访问服务器。请验证实例名称是否正确并且 SQL Server 已配置为允许远程连接。 (provider: Named Pipes Provider, error: 40 - 无法打开到 SQL Server 的连接)
-
-[Header]
-2014-03-23 21:07:06
-登录时发生异常。登录用户名：pkwblack；错误信息：从索引 0 处开始，初始化字符串的格式不符合规范。
+[Footer]
 
 [Header]
 [Footer]

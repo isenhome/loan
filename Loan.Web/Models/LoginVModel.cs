@@ -23,12 +23,12 @@ namespace Loan.Web.Models
         [StringLength(16, MinimumLength=6, ErrorMessage="密码长度为6-16位")]
         public string Password { get; set; }
 
-        /// <summary>
-        /// 验证码
-        /// </summary>
-        [Required(ErrorMessage = "请输入验证码")]
-        [RegularExpression("^\\d{5}$", ErrorMessage = "验证码不正确")]
-        public string ValidCode { get; set; }
+        ///// <summary>
+        ///// 验证码
+        ///// </summary>
+        //[Required(ErrorMessage = "请输入验证码")]
+        //[RegularExpression("^\\d{5}$", ErrorMessage = "验证码不正确")]
+        //public string ValidCode { get; set; }
 
         #region 构造函数
         public LoginVModel() { }

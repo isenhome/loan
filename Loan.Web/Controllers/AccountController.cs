@@ -51,24 +51,25 @@ namespace Loan.Web.Controllers
         {
             if (ModelState.IsValid)
             {
-                if (loginModel.ValidCode != Session[GlobalConst.SESSIONNAME_VALIDCODE_LOGIN].ToString())
-                {
-                    ModelState.AddModelError("", "验证码不正确！");
-                }
+                //if (loginModel.ValidCode != Session[GlobalConst.SESSIONNAME_VALIDCODE_LOGIN].ToString())
+                //{
+                //    ModelState.AddModelError("", "验证码不正确！");
+                //}
+                if (false) { }
                 else
                 {
                     UserQuery userQuery = new UserQuery();
                     userQuery.UserName = loginModel.UserName;
                     userQuery.Password = loginModel.Password;
                     UserLogic userLogic = new UserLogic();
-                    
-                    if(userLogic.CheckUser(userQuery))
-                    {
-                         //记录SESSION登陆信息
-                    Session[GlobalConst.SESSIONNAME_USERNAME] = loginModel.UserName;
 
-                    //跳转到系统主页
-                    return RedirectToAction("Default", "ZhuYe");
+                    if (userLogic.CheckUser(userQuery))
+                    {
+                        //记录SESSION登陆信息
+                        Session[GlobalConst.SESSIONNAME_USERNAME] = loginModel.UserName;
+
+                        //跳转到系统主页
+                        return RedirectToAction("Index", "MainPage");
                     }
                     else
                     {
