@@ -18,6 +18,7 @@ namespace Loan.Test
             //info.NAME = "isenhome";
             //var result = dao.Insert(info);
             //Console.Read();
+            //test.edit
         }
     }
 }
