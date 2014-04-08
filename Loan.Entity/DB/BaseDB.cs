@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Loan.Entity.Enum;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -9,7 +10,7 @@ namespace Loan.Entity.DB
     public class BaseDB
     {
         [PetaPoco.Column]
-        public int Status { get; set; }
+        public Status Status { get; set; }
         [PetaPoco.Column]
         public DateTime CreateTime { get; set; }
         [PetaPoco.Column]

@@ -1,4 +1,5 @@
-﻿using System;
+﻿using Loan.Entity.Enum;
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using System.Text;
@@ -6,16 +7,17 @@ using System.Threading.Tasks;
 
 namespace Loan.Entity.DB
 {
-    [PetaPoco.TableName("Lender")]
-    public class Lender : BaseDB
+    [PetaPoco.TableName("LoanFile")]
+    public class LoanFile:BaseDB
     {
         [PetaPoco.Column]
-        public int ID { get; set; }
+        public string Guid { get; set; }
         [PetaPoco.Column]
         public string Name { get; set; }
         [PetaPoco.Column]
-        public string Identity { get; set; }
+        public string OriginalName { get; set; }
         [PetaPoco.Column]
-        public DateTime Birthday { get; set; }
+        public LoanFileType Type { get; set; }
+
     }
 }
