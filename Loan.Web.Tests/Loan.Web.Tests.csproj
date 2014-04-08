@@ -101,6 +101,16 @@
   <ItemGroup>
     <None Include="packages.config" />
   </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\Loan.Data\Loan.Data.csproj">
+      <Project>{c8bd3c6d-772c-4a3e-b967-f5fdc8b7ddd4}</Project>
+      <Name>Loan.Data</Name>
+    </ProjectReference>
+    <ProjectReference Include="..\Loan.Entity\Loan.Entity.csproj">
+      <Project>{393801da-02be-4177-97a8-13c47fb2aa9a}</Project>
+      <Name>Loan.Entity</Name>
+    </ProjectReference>
+  </ItemGroup>
   <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
   <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
        Other similar extension points exist, see Microsoft.Common.targets.

@@ -109,7 +109,9 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\CollectingController.cs" />
     <Compile Include="Controllers\MainPageController.cs" />
+    <Compile Include="Filter\LoginFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>

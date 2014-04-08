@@ -46,8 +46,12 @@
     <Reference Include="System.ComponentModel.DataAnnotations" />
     <Reference Include="System.Configuration" />
     <Reference Include="System.Core" />
+    <Reference Include="System.DirectoryServices.Protocols" />
     <Reference Include="System.Drawing" />
+    <Reference Include="System.Runtime.Serialization" />
     <Reference Include="System.Web" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Mvc, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL" />
     <Reference Include="System.Xml.Linq" />
     <Reference Include="System.Data.DataSetExtensions" />
     <Reference Include="Microsoft.CSharp" />
@@ -55,8 +59,30 @@
     <Reference Include="System.Xml" />
   </ItemGroup>
   <ItemGroup>
+    <Compile Include="Attributes\ActionOutputCacheAttribute.cs" />
+    <Compile Include="Attributes\CacheFilterAttribute.cs" />
+    <Compile Include="Attributes\CustomAttribute.cs" />
+    <Compile Include="Attributes\RequiresAuthenticationAttribute.cs" />
     <Compile Include="ConfigurationHelper.cs" />
+    <Compile Include="Extension\Dynamic.cs" />
+    <Compile Include="Extension\ExceptionExtension.cs" />
+    <Compile Include="Extension\RequestQueryStringExtension.cs" />
+    <Compile Include="Extension\StringExtension.cs" />
     <Compile Include="GlobalConst.cs" />
+    <Compile Include="Helper\DesEncryptHelper.cs" />
+    <Compile Include="Helper\EnumHelper.cs" />
+    <Compile Include="Helper\FileHelper.cs" />
+    <Compile Include="Helper\FormulaHelper.cs" />
+    <Compile Include="Helper\FTPFactory.cs" />
+    <Compile Include="Helper\FTPHelper.cs" />
+    <Compile Include="Helper\JsonHelper.cs" />
+    <Compile Include="Helper\LangHelper.cs" />
+    <Compile Include="Helper\LangUtil.cs" />
+    <Compile Include="Helper\LinqHelper.cs" />
+    <Compile Include="Helper\MailHelper.cs" />
+    <Compile Include="Helper\Md5Code.cs" />
+    <Compile Include="Helper\RequestHelper.cs" />
+    <Compile Include="Helper\Util.cs" />
     <Compile Include="MethodCache\AOPFactory.cs" />
     <Compile Include="MethodCache\AopTestClass.cs" />
     <Compile Include="MethodCache\AspectAttribute.cs" />
@@ -67,7 +93,7 @@
     <Compile Include="MethodCache\MethodContext.cs" />
     <Compile Include="Models\IList.cs" />
     <Compile Include="Models\PetaPoco.cs" />
-    <Compile Include="ObjectExtension.cs" />
+    <Compile Include="Extension\ObjectExtension.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
