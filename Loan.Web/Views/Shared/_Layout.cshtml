@@ -384,26 +384,26 @@
                 <li class="start active ">
                     <a href="/MainPage/Index">
                         <i class="fa fa-home"></i>
-                        <span class="title">首页（竖排）</span>
+                        <span class="title">主页</span>
                         <span class="selected"></span>
                     </a>
                 </li>
                 <li class="">
-                    <a href="/MainPage/Index_Horizontal">
+                    <a href="@ViewBag.NavShowStylePageURL">
                         <i class="fa fa-briefcase"></i>
-                        <span class="title">首页（横排）</span>
+                        <span class="title">导航横排展示</span>
                     </a>
                 </li>
                 <li class="">
                     <a href="javascript:;">
                         <i class="fa fa-cogs"></i>
-                        <span class="title">Layouts</span>
+                        <span class="title">分公司管理</span>
                         <span class="arrow "></span>
                     </a>
                     <ul class="sub-menu">
                         <li>
-                            <a href="layout_session_timeout.html">
-                                <span class="badge badge-roundless badge-warning">new</span>Session Timeout
+                            <a href="/BranchCompany/Add">
+                                添加分公司
                             </a>
                         </li>
                         <li>
@@ -1035,6 +1035,31 @@
             </div>
             <!-- END BEGIN STYLE CUSTOMIZER -->            
             <div id="dashboard">
+                <!-- BEGIN PAGE HEADER-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                        <h3 class="page-title">
+                            @ViewBag.FunctionName <small>@ViewBag.FunctionDescription</small>
+                        </h3>
+                        <ul class="page-breadcrumb breadcrumb">
+                            <li>
+                                <i class="fa fa-home"></i>
+                                <a href="/MainPage/Index">主页</a>
+                                <i class="fa fa-angle-right"></i>
+                            </li>
+                            <li>
+                                <a href="@ViewBag.FunctionURL">@ViewBag.Function</a>
+                                <i class="fa fa-angle-right"></i>
+                            </li>
+                            <li>
+                                <a href="@ViewBag.FunctionNameURL">@ViewBag.FunctionName</a>
+                            </li>
+                        </ul>
+                        <!-- END PAGE TITLE & BREADCRUMB-->
+                    </div>
+                </div>
+                <!-- END PAGE HEADER-->
 
                 @RenderBody()
 
