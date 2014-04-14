@@ -6,11 +6,15 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Web;
 using System.Web.Mvc;
+using Webdiyer.WebControls.Mvc;
+using Loan.Core;
 
 namespace Loan.Web.Controllers
 {
     public class BranchCompanyController : Controller
     {
+        BranchCompanyLogic branchCompanyLogic = new BranchCompanyLogic();
+
         /// <summary>
         /// add new branch company
         /// </summary>
@@ -40,8 +44,7 @@ namespace Loan.Web.Controllers
         public ActionResult Add(BranchCompanyVModel branchCompanyV)
         {
             if (ModelState.IsValid)
-            { 
-                BranchCompanyLogic branchCompanyLogic = new BranchCompanyLogic();
+            {                 
                 BranchCompany branchCompany = new BranchCompany();
                 branchCompany.Name = branchCompanyV.Name;
                 branchCompany.Address = branchCompanyV.Address;
@@ -56,6 +59,24 @@ namespace Loan.Web.Controllers
                 }
             }
             return View(branchCompanyV);
+        }
+        #endregion
+
+        #region 获取分公司列表
+        /// <summary>
+        /// 获取分公司列表
+        /// </summary>
+        /// <remarks>
+        /// 创建：李真 2014-04-14
+        /// </remarks>
+        /// <param name="pageSize"></param>
+        /// <param name="pageIndex"></param>
+        /// <returns></returns>
+        public ActionResult GetList(int id = 1)
+        {
+            int pageindex = id;
+            var info = branchCompanyLogic.GetList(GlobalConst.PAGESIZE, pageindex);
+            return View(info.Items.ToPagedList(pageindex, GlobalConst.PAGESIZE, info.TotalItems.TryInt()));
         }
         #endregion
     }

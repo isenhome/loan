@@ -4,6 +4,9 @@ using System.Collections.Generic;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using Loan.Core.Models;
+using Loan.Core;
+using PetaPoco;
 
 namespace Loan.Data
 {
@@ -20,10 +23,25 @@ namespace Loan.Data
         /// <returns></returns>
         public int Insert(BranchCompany branchCompany)
         {
-            var info = database.Insert("branchcompany", "branchcompanyID", true, branchCompany);
-            if (info != null)
-                return Convert.ToInt32(info);
-            return -200;
+            var result = database.Insert("branchcompany", "branchcompanyID", true, branchCompany);
+            return result.TryInt();
+        }
+        #endregion
+
+        #region 获取分公司列表
+        /// <summary>
+        /// 获取分公司列表
+        /// </summary>
+        /// <remarks>
+        /// 创建：李真 2014-04-14
+        /// </remarks>
+        /// <param name="pageSize"></param>
+        /// <param name="pageIndex"></param>
+        /// <returns></returns>
+        public Page<BranchCompany> GetList(int pageSize, int pageIndex)
+        {
+            var sql = PetaPoco.Sql.Builder.Append("SELECT * FROM branchcompany ORDER BY BranchCompanyID ASC");
+            return database.Page<BranchCompany>(pageIndex, pageSize, sql);
         }
         #endregion
     }
