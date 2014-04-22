@@ -2005,6 +2005,7 @@
     <Content Include="assets\scripts\ui-nouisliders.js" />
     <Content Include="assets\scripts\ui-toastr.js" />
     <Content Include="assets\scripts\ui-tree.js" />
+    <Content Include="Content\pagerstyles.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -2312,6 +2313,7 @@
     <Content Include="Views\MainPage\Index_Horizontal.cshtml" />
     <Content Include="Views\BranchCompany\Add.cshtml" />
     <Content Include="Views\BranchCompany\GetList.cshtml" />
+    <Content Include="Views\BranchCompany\aaa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

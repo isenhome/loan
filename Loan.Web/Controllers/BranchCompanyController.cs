@@ -69,11 +69,17 @@ namespace Loan.Web.Controllers
         /// <remarks>
         /// 创建：李真 2014-04-14
         /// </remarks>
-        /// <param name="pageSize"></param>
-        /// <param name="pageIndex"></param>
+        /// <param name="id">当前页码</param>
         /// <returns></returns>
         public ActionResult GetList(int id = 1)
         {
+            ViewBag.Function = "分公司";
+            ViewBag.FunctionURL = "/BranchCompany/GetList";
+            ViewBag.FunctionName = "分公司管理";
+            ViewBag.FunctionNameURL = "/BranchCompany/GetList";
+            ViewBag.FunctionDescription = "";
+            ViewBag.NavShowStylePageURL = "/BranchCompany/GetList_Horizontal";
+            
             int pageindex = id;
             var info = branchCompanyLogic.GetList(GlobalConst.PAGESIZE, pageindex);
             return View(info.Items.ToPagedList(pageindex, GlobalConst.PAGESIZE, info.TotalItems.TryInt()));

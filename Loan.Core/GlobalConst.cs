@@ -27,7 +27,7 @@ namespace Loan.Core
         /// <summary>
         /// 列表分页显示时，每页显示记录数
         /// </summary>
-        public const int PAGESIZE = 5;
+        public const int PAGESIZE = 10;
         #endregion
 
         #region 枚举
