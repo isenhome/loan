@@ -26,7 +26,7 @@ namespace Loan.Test
                 fs.Write(btContent, 0, intSize);
                 intSize = myStream.Read(btContent, 0, 512);
             }
-            //test update
+            //test update----
         }
     }
 }
