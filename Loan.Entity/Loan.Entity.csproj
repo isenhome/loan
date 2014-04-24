@@ -40,6 +40,7 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="DB\BaseDB.cs" />
+    <Compile Include="DB\BranchCompany.cs" />
     <Compile Include="DB\Lender.cs" />
     <Compile Include="DB\LoanFile.cs" />
     <Compile Include="DB\User.cs" />

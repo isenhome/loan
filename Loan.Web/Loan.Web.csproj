@@ -40,6 +40,9 @@
   </PropertyGroup>
   <ItemGroup>
     <Reference Include="Microsoft.CSharp" />
+    <Reference Include="MvcPager">
+      <HintPath>D:\Documents\Downloads\MvcPagerDemoNet4.0\bin\MvcPager.dll</HintPath>
+    </Reference>
     <Reference Include="System" />
     <Reference Include="System.Data" />
     <Reference Include="System.Drawing" />
@@ -109,12 +112,15 @@
   </ItemGroup>
   <ItemGroup>
     <Compile Include="Controllers\AccountController.cs" />
+    <Compile Include="Controllers\BranchCompanyController.cs" />
     <Compile Include="Controllers\CollectingController.cs" />
     <Compile Include="Controllers\MainPageController.cs" />
     <Compile Include="Filter\LoginFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
     </Compile>
+    <Compile Include="Models\BranchCompanyVModel.cs" />
+    <Compile Include="Models\ExtensionMethods\PageLinqExtensionMethods.cs" />
     <Compile Include="Models\LoginVModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
@@ -1999,6 +2005,7 @@
     <Content Include="assets\scripts\ui-nouisliders.js" />
     <Content Include="assets\scripts\ui-toastr.js" />
     <Content Include="assets\scripts\ui-tree.js" />
+    <Content Include="Content\pagerstyles.css" />
     <Content Include="Content\Site.css" />
     <Content Include="Content\themes\base\images\ui-bg_flat_0_aaaaaa_40x100.png" />
     <Content Include="Content\themes\base\images\ui-bg_flat_75_ffffff_40x100.png" />
@@ -2304,6 +2311,9 @@
     <Content Include="Views\Shared\_Layout.cshtml" />
     <Content Include="Views\Account\Login.cshtml" />
     <Content Include="Views\MainPage\Index_Horizontal.cshtml" />
+    <Content Include="Views\BranchCompany\Add.cshtml" />
+    <Content Include="Views\BranchCompany\GetList.cshtml" />
+    <Content Include="Views\BranchCompany\aaa.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

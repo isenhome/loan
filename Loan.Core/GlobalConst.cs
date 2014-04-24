@@ -23,6 +23,11 @@ namespace Loan.Core
         /// 记录登陆用户名的SESSION名称
         /// </summary>
         public const string SESSIONNAME_USERNAME = "UserName";
+
+        /// <summary>
+        /// 列表分页显示时，每页显示记录数
+        /// </summary>
+        public const int PAGESIZE = 10;
         #endregion
 
         #region 枚举

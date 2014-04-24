@@ -1,0 +1,87 @@
+﻿@{
+    ViewBag.Title = "Add";
+    Layout = "~/Views/Shared/_Layout.cshtml";
+}
+@model Loan.Web.Models.BranchCompanyVModel
+
+<div class="tab-content">
+    <div class="tab-pane active" id="tab_0">
+        <div class="portlet box blue">
+            <div class="portlet-title">
+                <div class="caption"><i class="fa fa-reorder"></i>添加新的分公司</div>
+                <div class="tools">
+                    <a href="javascript:;" class="collapse"></a>
+                </div>
+            </div>
+            <div class="portlet-body form">
+                <!-- BEGIN FORM-->
+                @using (Html.BeginForm("Add", "BranchCompany", FormMethod.Post, new { @class = "form-horizontal" }))
+                {
+                    <div class="form-body">
+                        <div class="alert alert-danger display-hide">
+                            <button class="close" data-close="alert"></button>
+                            <span>Enter any username and password.</span>
+                        </div>
+                        @Html.ValidationSummary(false)
+
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">名称</label>
+                            <div class="col-md-4">
+                                @Html.TextBoxFor(m => m.Name, new
+                   {
+                       @class = "form-control"
+                       ,
+                       maxlength = "25"
+                       ,
+                       placeholder = "分公司名称"
+                   })
+                                @Html.ValidationMessageFor(m => m.Name)
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">地址</label>
+                            <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.Address, new
+                   {
+                       @class = "form-control"
+                       ,
+                       maxlength = "100"
+                       ,
+                       placeholder = "分公司地址"
+                   })
+                                    @Html.ValidationMessageFor(m => m.Address)
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">邮编</label>
+                            <div class="col-md-4">
+                                    @Html.TextBoxFor(m => m.PostCode, new
+                   {
+                       @class = "form-control"
+                       ,
+                       maxlength = "6"
+                       ,
+                       placeholder = "分公司邮编"
+                   })
+                                    @Html.ValidationMessageFor(m => m.PostCode)
+                                </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-3 control-label">描述</label>
+                            <div class="col-md-4">
+                                @Html.TextAreaFor(m => m.Description, new { @class = "form-control" })
+                            </div>
+                        </div>
+                    </div>
+                    <div class="form-actions fluid">
+                        <div class="col-md-offset-3 col-md-9">
+                            <button type="submit" class="btn blue">添加</button>
+                        </div>
+                    </div>
+                }
+                <form action="#" class="form-horizontal"></form>
+                <!-- END FORM-->
+            </div>
+        </div>
+    </div>
+</div>

@@ -30,6 +30,7 @@
     <link rel="shortcut icon" href="favicon.ico" />
     <!-- BEGIN MVC STYLES -->
     <link rel="stylesheet" href="@Url.Content("/Content/Site.css")">
+    <link rel="stylesheet" href="@Url.Content("/Content/pagerstyles.css")">
 </head>
 <!-- END HEAD -->
 <!-- BEGIN BODY -->
@@ -46,19 +47,24 @@
             <!-- BEGIN HORIZANTAL MENU -->
             <div class="hor-menu hidden-sm hidden-xs">
                 <ul class="nav navbar-nav">
-                    <li>
-                        @Html.ActionLink("首页（竖排）", "Index", "MainPage")
-                    </li>
                     <li class="active">
+                        @Html.ActionLink("主页", "Index_Horizontal", "MainPage")
+                    </li>
+                    <li>
+                        <a href="@ViewBag.NavShowStylePageURL">
+                            导航竖排展示
+                        </a>
+                    </li>
+                    <li>
                         <a data-toggle="dropdown" data-hover="dropdown" data-close-others="true" class="dropdown-toggle" href="javascript:;">
                             <span class="selected"></span>
-                            Layouts
+                            分公司管理
                             <i class="fa fa-angle-down"></i>
                         </a>
                         <ul class="dropdown-menu">
                             <li>
-                                <a href="layout_language_bar.html">
-                                    <span class="badge badge-roundless badge-important">new</span>Language Switch Bar
+                                <a href="/BranchCompany/Add_Horizontal">
+                                    添加分公司
                                 </a>
                             </li>
                             <li>
@@ -702,6 +708,31 @@
             </div>
             <!-- END BEGIN STYLE CUSTOMIZER -->            
             <div id="dashboard">
+                <!-- BEGIN PAGE HEADER-->
+                <div class="row">
+                    <div class="col-md-12">
+                        <!-- BEGIN PAGE TITLE & BREADCRUMB-->
+                        <h3 class="page-title">
+                            @ViewBag.FunctionName <small>@ViewBag.FunctionDescription</small>
+                        </h3>
+                        <ul class="page-breadcrumb breadcrumb">
+                            <li>
+                                <i class="fa fa-home"></i>
+                                <a href="/MainPage/Index">主页</a>
+                                <i class="fa fa-angle-right"></i>
+                            </li>
+                            <li>
+                                <a href="@ViewBag.FunctionURL">@ViewBag.Function</a>
+                                <i class="fa fa-angle-right"></i>
+                            </li>
+                            <li>
+                                <a href="@ViewBag.FunctionNameURL">@ViewBag.FunctionName</a>
+                            </li>
+                        </ul>
+                        <!-- END PAGE TITLE & BREADCRUMB-->
+                    </div>
+                </div>
+                <!-- END PAGE HEADER-->
 
                 @RenderBody()
 
