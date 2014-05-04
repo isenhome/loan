@@ -7,6 +7,7 @@ using System.Threading.Tasks;
 using Loan.Core.Models;
 using Loan.Core;
 using PetaPoco;
+using System.Data.SqlClient;
 
 namespace Loan.Data
 {
@@ -42,6 +43,29 @@ namespace Loan.Data
         {
             var sql = PetaPoco.Sql.Builder.Append("SELECT * FROM branchcompany ORDER BY BranchCompanyID ASC");
             return database.Page<BranchCompany>(pageIndex, pageSize, sql);
+        }
+        #endregion
+
+        #region 更新分公司状态
+        /// <summary>
+        /// 更新分公司状态
+        /// </summary>
+        /// <remarks>
+        /// 创建：李真 2014-05-05
+        /// </remarks>
+        /// <param name="id">分公司id</param>
+        /// <param name="status">状态</param>
+        /// <returns></returns>
+        public int ChangeStatus(int id, GlobalConst.Status status)
+        {
+            string strSql = string.Format("UPDATE branchcompany SET status=@status where branchcompanyid=@id");
+            SqlParameter[] paras = new SqlParameter[] 
+            { 
+                new SqlParameter("@status", status.TryInt())
+                , new SqlParameter("@id", id) 
+            };
+
+            return database.Update<BranchCompany>(strSql, paras);
         }
         #endregion
     }

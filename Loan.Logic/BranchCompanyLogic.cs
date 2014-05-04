@@ -61,5 +61,29 @@ namespace Loan.Logic
             }
         }
         #endregion
+
+        #region 更新分公司状态
+        /// <summary>
+        /// 更新分公司状态
+        /// </summary>
+        /// <remarks>
+        /// 创建：李真 2014-05-05
+        /// </remarks>
+        /// <param name="id">分公司id</param>
+        /// <param name="status">状态</param>
+        /// <returns></returns>
+        public int ChangeStatus(int id, GlobalConst.Status status)
+        {
+            try
+            {
+                return AOPFactory.CreateInstance<BranchCompanyDao>().ChangeStatus(id, status);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(string.Format("更新分公司状态发生异常."));
+                return -200;
+            }
+        }
+        #endregion
     }
 }

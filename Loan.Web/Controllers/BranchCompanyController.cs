@@ -55,7 +55,8 @@ namespace Loan.Web.Controllers
                 if (iResult >= 0)
                 { 
                     //新增成功
-
+                    ViewBag.AlertMessage = "新增成功";
+                    return View(new BranchCompanyVModel());
                 }
             }
             return View(branchCompanyV);
@@ -83,6 +84,92 @@ namespace Loan.Web.Controllers
             int pageindex = id;
             var info = branchCompanyLogic.GetList(GlobalConst.PAGESIZE, pageindex);
             return View(info.Items.ToPagedList(pageindex, GlobalConst.PAGESIZE, info.TotalItems.TryInt()));
+        }
+        #endregion
+
+        #region 禁用分公司
+        /// <summary>
+        /// 禁用分公司
+        /// </summary>
+        /// <remarks>
+        /// 创建：李真 2014-05-05
+        /// </remarks>
+        /// <param name="id">分公司ID</param>
+        /// <param name="pageindex">列表当前页码</param>
+        /// <returns></returns>
+        public ActionResult Lock(int id, int pageindex)
+        {
+            int result = branchCompanyLogic.ChangeStatus(id, GlobalConst.Status.Locked);
+            if (result >= 0)
+            {
+                ViewBag.AlertMessage = "禁用成功";                                
+            }
+            else
+            {
+                ViewBag.AlertMessage = "禁用失败";                                
+            }
+
+            var info = branchCompanyLogic.GetList(GlobalConst.PAGESIZE, pageindex);
+            return View("GetList", info.Items.ToPagedList(pageindex, GlobalConst.PAGESIZE, info.TotalItems.TryInt()));
+        }
+        #endregion
+
+        #region 启用分公司
+        /// <summary>
+        /// 启用分公司
+        /// </summary>
+        /// <remarks>
+        /// 创建：李真 2014-05-05
+        /// </remarks>
+        /// <param name="id">分公司ID</param>
+        /// <param name="pageindex">列表当前页码</param>
+        /// <returns></returns>
+        public ActionResult UnLock(int id, int pageindex)
+        {
+            int result = branchCompanyLogic.ChangeStatus(id, GlobalConst.Status.Normal);
+            if (result >= 0)
+            {
+                ViewBag.AlertMessage = "启用成功";
+            }
+            else
+            {
+                ViewBag.AlertMessage = "启用失败";
+            }
+
+            var info = branchCompanyLogic.GetList(GlobalConst.PAGESIZE, pageindex);
+            return View("GetList", info.Items.ToPagedList(pageindex, GlobalConst.PAGESIZE, info.TotalItems.TryInt()));
+        }
+        #endregion
+
+        #region 删除分公司
+        /// <summary>
+        /// 删除分公司
+        /// </summary>
+        /// <remarks>
+        /// 创建：李真 2014-05-05
+        /// </remarks>
+        /// <param name="id">分公司ID</param>
+        /// <param name="pageindex">列表当前页码</param>
+        /// <returns></returns>
+        public ActionResult Delete(int id, int pageindex)
+        {
+            int result = branchCompanyLogic.ChangeStatus(id, GlobalConst.Status.Normal);
+            if (result >= 0)
+            {
+                ViewBag.AlertMessage = "删除成功";
+            }
+            else
+            {
+                ViewBag.AlertMessage = "删除失败";
+            }
+
+            var info = branchCompanyLogic.GetList(GlobalConst.PAGESIZE, pageindex);
+            if (info.TotalItems.TryInt() == 0 && pageindex > 1)
+            {
+                pageindex = pageindex - 1;
+                info = branchCompanyLogic.GetList(GlobalConst.PAGESIZE, pageindex);
+            }
+            return View("GetList", info.Items.ToPagedList(pageindex, GlobalConst.PAGESIZE, info.TotalItems.TryInt()));
         }
         #endregion
     }

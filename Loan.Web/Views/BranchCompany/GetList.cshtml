@@ -9,9 +9,17 @@
 <!-- BEGIN PAGE LEVEL STYLES -->
 <link rel="stylesheet" type="text/css" href="@Url.Content("/assets/plugins/select2/select2_metro.css")">
 <link rel="stylesheet" type="text/css" href="@Url.Content("/assets/plugins/data-tables/DT_bootstrap.css")">
-
-
 <!-- END PAGE LEVEL STYLES -->
+
+<script type="text/javascript">
+    $(function () {
+        if ("@ViewBag.AlertMessage" != "")
+        {
+            bootbox.alert("@ViewBag.AlertMessage");
+        }
+    });
+</script>
+
 <!-- BEGIN EXAMPLE TABLE PORTLET-->
 <div class="portlet box blue">
     <div class="portlet-title">
@@ -70,13 +78,13 @@
                             @Html.ActionLink("修改", "action")
                             @if (item.Status == 0)
                             {
-                                @Html.ActionLink("禁用", "action")
+                                @Html.ActionLink("禁用", "Lock", new { id = item.BranchCompanyID, pageindex = @Model.CurrentPageIndex })
                             }
                             @if (item.Status == 1)
                             {
-                                @Html.ActionLink("启用", "action")
+                                @Html.ActionLink("启用", "UnLock", new { id = item.BranchCompanyID, pageindex = @Model.CurrentPageIndex })
                             }
-                            @Html.ActionLink("删除", "action")
+                            @Html.ActionLink("删除", "Delete", new { id = item.BranchCompanyID, pageindex = @Model.CurrentPageIndex })
                         </td>
                     </tr>
                 }
