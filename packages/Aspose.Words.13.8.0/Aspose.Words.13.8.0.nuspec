@@ -1,0 +1,197 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Aspose.Words</id>
+    <version>13.8.0</version>
+    <title>Aspose.Words for .Net</title>
+    <authors>Aspose</authors>
+    <owners>Aspose</owners>
+    <licenseUrl>http://www.aspose.com/corporate/purchase/end-user-license-agreement.aspx</licenseUrl>
+    <projectUrl>http://www.aspose.com/categories/.net-components/aspose.words-for-.net/default.aspx</projectUrl>
+    <iconUrl>http://www.aspose.com/images/products/dotnet/Aspose.Words_128x128.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Aspose.Words for .NET class library supports DOC, DOCX, RTF, HTML, OpenDocument, PDF, XPS, EPUB and other formats. With Aspose.Words you can generate, modify, convert, render and print documents without utilizing Microsoft Word®</description>
+    <releaseNotes>There are 159 improvements and fixes in this regular monthly release. The most notable are:
+
+• Rendering to PostScript 3.0 is now supported
+• Metafile rendering performance significantly improved
+• EditableRange API introduced
+• German ordinal/cardinal list label generation supported
+• Improved tab width computation in marginal scenarios
+• Improved table border rendering with conflicting or missing attributes
+
+This release introduces the new features, enhancements and fixes to the excptions/bugs as detailed below:
+
+• New features
+WORDSNET-1067	/protection ranges/ Support protection of selected ranges in documents.
+WORDSNET-1960	Add an option to resample images to size and resolution before writing to PDF
+WORDSNET-2304	Consider adding an ability to remove style from the document.
+WORDSNET-3995	Support rendering document to PostScript
+WORDSNET-4252	Consider adding a property to Style class which shows if a Style is part of the Quick Styles gallery in a document
+WORDSNET-4726	/protection ranges/ permStart/permEnd tags are lost during open/save DOCX and WML
+WORDSNET-5998	Consider public API for removal of External Custom XML Schema References
+WORDSNET-6196	Support German numbering localization
+WORDSNET-6719	/protection ranges/ Header footer protection while document remains editable
+WORDSNET-6905	Content controls become non-editable during open/save
+WORDSNET-8389	Preserve protection of selected ranges upon DOC round-trip.
+WORDSNET-8593	Document.Save do not preserve unprotected regions
+WORDSNET-8594	Span width is not preserved during converting MHTML to Word
+WORDSNET-8655	Add option to convert SVG to EMF instead of PNG in output Pdf file
+WORDSNET-8765	Text moves to next line after conversion from Docx to Pdf
+WORDSNET-8799	Render path gradient in SWF.
+
+• Enhancements
+WORDSJAVA-765	open DataTable-related classes for public api.
+WORDSNET-2570	Center-aligned text becomes left-aligned after HTML roundtrip
+WORDSNET-2778	Background specified using patterns is not displayed in HTML.
+WORDSNET-2800	&lt; br &gt; between two tables doesn't take effect
+WORDSNET-3550	Left alignment of text in one cell is changed to center alignment during HTML export.
+WORDSNET-3703	Color specified in row style has no effect during HTML import.
+WORDSNET-3726	First table row appears bold during converting to HTML.
+WORDSNET-4244	Formating of table is incorrect when save to DOCX.
+WORDSNET-4467	Make it possible to detect floating tables via the public API
+WORDSNET-4477	Documents when saved in doc and pdf format looks different
+WORDSNET-4482	File size is unacceptably increased after HTML export.
+WORDSNET-4566	Background color applied to paragraph has no effect during HTML export.
+WORDSNET-4703	FileCorruptedException is thrown upon loading MHTML.
+WORDSNET-4951	Part of content is moved to the next page upon rendering.
+WORDSNET-5702	WMF Raster operations is not supported // Doc to PDF conversion issue, when an excel embedded object exists in doc file
+WORDSNET-5723	Image appears as "red cross" after open and save in html format.
+WORDSNET-5791	section.PageSetup.RestartPageNumbering does not effect after conversion
+WORDSNET-5857	table layouts get corrupted when "PAGE" field inserted
+WORDSNET-6106	Improve Paragraph border rendering
+WORDSNET-6262	UpdateFields messes the rendering of merged cells of table
+WORDSNET-6385	CellMerge do not work properly when InsertField("Page") inserted after table
+WORDSNET-6641	Layout Problems with DOC to PDF conversion
+WORDSNET-7214	Consider adding a Callback event that triggers when a table is split across pages
+WORDSNET-7819	Revision is read incorrecly.
+WORDSNET-7981	Arrow heads in flow chart Shape are not visible in PDF
+WORDSNET-8583	Table Borders are missing when converting Docx to PDF
+WORDSNET-8611	Value of PAGE field is incorrectly calculated during RTF to PDF conversion
+WORDSNET-8620	A Paragraph renders on to the previous page in PDF
+WORDSNET-8653	StyleCollection.AddCopy do not work correctly with themes
+WORDSNET-8666	Copies of the template are not getting separated by a section break in destination document
+WORDSNET-8684	/legacy lists/ Amount of Tab space between List number and Text is incorrectly calculated during rendering to PDF
+WORDSNET-8694	Aspose.Words.FileCorruptedException while loading Docx file int DOM
+WORDSNET-8703	doc.Styles[StyleIdentifier.xxxx] creates new style in the empty document
+WORDSNET-8720	System.ArgumentException is thrown when exporting a Doc to Html
+WORDSNET-8722	Font formatting issue after conversion from Doc to Png
+WORDSNET-8807	TextBox overlaps the content of following Paragraph after appending documents
+
+• Exceptions
+WORDSJAVA-521	ExternalFontCache appears to have a problem in a multi threaded envrionment when processing a document with embedded fonts
+WORDSJAVA-733	CLONE - Document clones with multi threading
+WORDSJAVA-745	java.lang.RuntimeException occurs when converting DOC to HTML or PDF
+WORDSJAVA-760	java.lang.OutOfMemoryError: Investigate memory leaks when using openjdk on linux
+WORDSNET-366	Specifying an asterisk as table width during HTML import throws
+WORDSNET-5192	InvalidOperationException is thrown upon rendering/converting to HTML
+WORDSNET-6760	System.InvalidOperationException thrown while rendering DOCX to PDF
+WORDSNET-7291	Aspose.Words.Document unable to load HTML file
+WORDSNET-8270	Investigate exception with Aspose.Email dashboard examples
+WORDSNET-8371	Exception while loading RTF file into Aspose.Words DOM.
+WORDSNET-8572	NullReferenceException occurs during rendering Shape to Html or PDF
+WORDSNET-8648	Aspose.Words.FileCorruptedException occurs when loading Docx file
+WORDSNET-8697	Dashboard exception with Aspose.Email product
+WORDSNET-8708	System.DivideByZeroException occurs during rendering Docx to Pdf
+WORDSNET-8709	System.IndexOutOfRangeException occurs when converting Docx to Pdf
+WORDSNET-8717	Can not find part of the path - Aspose.Email dashboard exception
+WORDSNET-8748	InvalidCastException occurs during exporting DOCX to HTML
+WORDSNET-8751	System.DivideByZeroException occurs during rendering Docx to Pdf
+WORDSNET-8777	InvalidOperationException occurs during open/save a Docx
+WORDSNET-8787	InvalidOperationException occurs when calling Document.AcceptAllRevisions method
+WORDSNET-8817	Aspose.Words.FileCorruptedException occurs when loading DOC file
+
+• Bugs
+WORDSJAVA-507	Image quality is degraded when converting to HTML
+WORDSJAVA-548	While converting Doc to Pdf, Circular image rendered as Square.
+WORDSJAVA-746	MetaFile images are not rendering correctly in PDF
+WORDSJAVA-747	Images are not preserved during rendering to PDF
+WORDSJAVA-753	'\PAGE' and '\NUMPAGES' fields are displaying 'Error! Bookmark not defined' message in PDF
+WORDSJAVA-755	Aspose.Words.FileCorruptedException occurs when loading MHTML file
+WORDSJAVA-759	Font resource unproperly loaded in test environment.
+WORDSJAVA-761	Mail Merge with regions do not work when used with IF field
+WORDSJAVA-766	PAGE and NUMPAGES fields are displaying 'Error! Bookmark not defined' message in PDF
+WORDSNET-1739	Colspan duplicates cells during opening HTML.
+WORDSNET-5239	Numbering in RTL document goes outside right margin
+WORDSNET-5286	Vertical merge information lost after open/save HTML.
+WORDSNET-5358	Shapes does not appear on "Selection Pane" in MS Word 2010 after open/save DOCX
+WORDSNET-5416	On DOC to PDF conversion, Table at the end of page is truncated
+WORDSNET-5630	Incorrect page layout in PDF and Debug.Assert warnings while loading the document.
+WORDSNET-5636	Incorrect rotation of the image
+WORDSNET-5669	Word Table header row content is aligned incorrectly in HTML
+WORDSNET-5771	Horizontally merged cells doesn't work in PDF/DOC etc
+WORDSNET-5923	A graybox is added on top left corner in Fixed page formats
+WORDSNET-5944	While converting docx to html, left border of the table is missing.
+WORDSNET-5952	While converting doc to html, empty paragraphs are missing.
+WORDSNET-5967	Frame around the image is misplaced during rendering
+WORDSNET-6068	Missing table contents after converting doc to PDF.
+WORDSNET-6263	Incorrect text font occurs while simple merge field execute (merge field within page footer).
+WORDSNET-6272	Incorrect DrawingML image layout while rendering.
+WORDSNET-6348	Surrogate characters are not visible in Docx format.
+WORDSNET-6407	RTF to PDF conversion same page duplicated many times
+WORDSNET-6429	Output PDF/TIFF/XPS has one more page than the input DOC
+WORDSNET-6539	One line Paragraph is rendering into two lines of text
+WORDSNET-6604	Paragraph's first line is hanging incorrectly to the left
+WORDSNET-7010	Cell widths are not maintained during open/save DOCX file
+WORDSNET-7192	Content Controls display incorrect values after AppendDocument
+WORDSNET-7692	Negative font size of a list label
+WORDSNET-8353	SVG image do not render correctly in exported document
+WORDSNET-8420	Text in Tables is made extra bold when rendering to PNG/TIFF
+WORDSNET-8451	RemoveEmptyParagraphs does not remove empty Paragraphs containing NEXTIF fields
+WORDSNET-8493	Doc to Pdf conversion issue - Underline is missing in PDF
+WORDSNET-8512	Inaccurate baseline position of text fields when rendering to PDF
+WORDSNET-8523	Hidden checkboxes become visible in PDF
+WORDSNET-8528	STYLEREF is not working for German language
+WORDSNET-8562	Docx to Pdf conversion issue with (pictograph) chart rendering
+WORDSNET-8599	/extra long runs/ Base64 image data (text) is partially rendering to PDF
+WORDSNET-8605	"Unknown document property name" error message is displayed in place of a DOCPROPERTY in PDF
+WORDSNET-8617	Rectangle Shapes are shifted vertically down when appending document to another document
+WORDSNET-8625	Paragraphs are not preserved during open/save an ODT
+WORDSNET-8627	Content inside Shape is truncated from bottom in fixed page formats
+WORDSNET-8628	Shape overlaps the content on it's right side in fixed page formats
+WORDSNET-8629	Shape is rendering at incorrect place in PDF
+WORDSNET-8630	Incorrect position of checkboxes when rendering to PDF
+WORDSNET-8631	Incorrect position of text fields when rendering to PDF
+WORDSNET-8643	After conversion from DOCX, text inside table becomes bold
+WORDSNET-8654	Values of Date picker StructuredDocumentTags are not preserved when rendering to Pdf
+WORDSNET-8657	DropCapPostion property is not working
+WORDSNET-8660	Font size of non-English text increases when rendering to PDF
+WORDSNET-8664	Document.AcceptAllRevisions do not work correctly
+WORDSNET-8680	Docx to Fixed file format conversion issue with table borders rendering
+WORDSNET-8682	Images are not imported from HTML when href contains escaped percent character (%25)
+WORDSNET-8683	Text in Shapes is truncated from bottom when rendering Docx to Pdf
+WORDSNET-8695	Doc to Pdf conversion issue with comment's position
+WORDSNET-8699	List changes its number format after appending one document to another
+WORDSNET-8713	Investigate if wrong fonts are used when rendering a Docx to Pdf or not
+WORDSNET-8714	OleFormat.SuggestedExtension returns .bin for an embedded Doc
+WORDSNET-8723	Font rendering issue after conversion from Doc to Png
+WORDSNET-8746	Frames are not positioned at correct places when rendering to Pdf
+WORDSNET-8753	Text is missing after conversion from RTF to Pdf
+WORDSNET-8759	UpdateFields hangs on calculating PAGE and NUMPAGES fields
+WORDSNET-8774	Field.Remove method doesn't remove all INCLUDEPICTURE fields from a Doc
+WORDSNET-8778	Bitmap, Worksheet and Slide OleObjects are not preserved during open/save DOT
+WORDSNET-8781	Value of FORMTEXT field is not preserved during open/save a Docx
+WORDSNET-8782	Dash character is added right after the bullet after conversion from Docx to Pdf
+WORDSNET-8791	Paragraph Font's inconsistency when it is set via DocumentBuilder.Font
+WORDSNET-8793	Doc to Pdf conversion issue with page border
+WORDSNET-8800	Shape causes Aspose.Words to hang during rendering DOC to HTML
+WORDSNET-8806	A graph image is cropped from bottom and right during appending documents
+WORDSNET-8831	Doc to Pdf conversion issue with Eq field
+
+• Performance
+WORDSNET-8118	Document constructor hangs during loading a MHTML
+WORDSNET-8543	Slow conversion of word to pdf with 13.6.0.0 but not with 11.4.0.0
+WORDSNET-8822	System.OutOfMemoryException occurs during loading a MHTML
+
+• Regressions
+WORDSJAVA-751	Image options (chroma key) unproperly added for grayscale images.
+WORDSJAVA-763	During mail merge, mergefields in the document are not getting replaced with values from data source
+WORDSNET-8370	PageNumberFinder does no longer generate two column structured document
+WORDSNET-8565	System.ArgumentOutOfRangeException occurs during rendering to HTML
+WORDSNET-8578	Aspose.Pdf no longer reads metadata keys/values correctly in PDF generated by Aspose.Words
+WORDSNET-8802	InvalidOperationException occurs during exporting DOC to HTML
+WORDSNET-8803	Aspose.Words.FileCorruptedException occurs when loading DOC file</releaseNotes>
+    <copyright>© Aspose 2002-2013. All Rights Reserved.</copyright>
+    <tags>Aspose.Words DOC DOCX RTF HTML OpenDocument XPS EPUB Word Document Processing</tags>
+  </metadata>
+</package>

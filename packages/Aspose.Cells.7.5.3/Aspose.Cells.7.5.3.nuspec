@@ -1,0 +1,51 @@
+<?xml version="1.0"?>
+<package xmlns="http://schemas.microsoft.com/packaging/2011/08/nuspec.xsd">
+  <metadata>
+    <id>Aspose.Cells</id>
+    <version>7.5.3</version>
+    <title>Aspose.Cells for .NET</title>
+    <authors>Aspose</authors>
+    <owners>Aspose</owners>
+    <licenseUrl>http://www.aspose.com/corporate/purchase/end-user-license-agreement.aspx</licenseUrl>
+    <projectUrl>http://www.aspose.com/categories/.net-components/aspose.cells-for-.net/default.aspx</projectUrl>
+    <iconUrl>http://www.aspose.com/images/products/dotnet/Aspose.Cells_128x128.png</iconUrl>
+    <requireLicenseAcceptance>true</requireLicenseAcceptance>
+    <description>Aspose.Cells for .NET is a spreadsheet programming component that allows software developers to manipulate and convert spreadsheet files from within their own applications. A combination of APIs and GUI controls, Aspose.Cells for .NET speeds up Microsoft Excel programming and conversion.</description>
+    <summary>Aspose.Cells for .Net is a class library for Excel document processing</summary>
+    <releaseNotes>New Features
+40428 - Support reading and writing Page Setup options of HTML file format
+ 
+Exceptions
+41955 - Exception “Object reference not set to an instance of an object” occurred when re-saving a template XLS file
+41931 - CellsException calculating SUBSTITUTE function
+41925 - Exception during the PivotTable.RefreshData() method call
+ 
+Bugs
+41940 - Errors and formatting issues in the generated PDF
+41933 - Black background when merging / adding sheets in the output PDF format
+41932 - Unable to convert specific XLS to PDF format
+41884 - Output TIF image is not correct
+41865 - Converting Excel to MHTML issue(s)
+41732 - Left cell overlaps into the right cell (XLS to HTML conversion)
+41662 - Right- to-Left problem in saving as HTML or MHT file format
+40956 - Conditional formatting fails when saving workbook as HTML format
+41978 - Pivot table seems to be using the cell’s Bold setting when converting to PDF file format
+41972 - Pivot table headers in compact form is using the header from Tabular/Outline form
+41969 - Pivot table headers with the wrong color in PDF format
+41949 - Subtotal entry in Pivot table is in the wrong column in the output PDF
+41944 - Calculated fields are not calculated if the source worksheet is removed
+41927 - Item label filters to only display ‘TRUE’ items is not working in the converted PDF file
+41908 - Day of week ordered incorrectly in the output PDF format
+41885 - Calculated field is not working / calculating correctly in Pivot tables
+41775 - Repeat item labels Pivot table setting is not used in the converted PDF
+41963 - Pivot table shows ‘#DIV/0!’ in value columns that are set to Average, AVERAGEIF formulas
+41939 - XLS file will not open without errors after removing Ole objects
+41936 - Saving XLSX file results in unreadable content
+41930 - Page Setup issue / problem which results in corrupted file
+41929 - Array formulas do not retain references to columns in the same table
+41914 - Corrupt files when merging workbooks
+41909 - COUNTIFS formula is not calculated correctly when converting to PDF</releaseNotes>
+    <copyright>© Aspose 2002-2013. All Rights Reserved.</copyright>
+    <tags>Excel Spreadsheet Aspose.Cells XLS XLSX TXT ODS</tags>
+  </metadata>
+</package>

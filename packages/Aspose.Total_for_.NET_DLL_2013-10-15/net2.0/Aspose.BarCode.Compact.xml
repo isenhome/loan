@@ -1,0 +1,1422 @@
+<?xml version="1.0"?>
+<doc>
+  <assembly>
+    <name>Aspose.BarCode.Compact</name>
+  </assembly>
+  <members>
+    <member name="T:Aspose.BarCode.License">
+      <summary>
+            Provides methods to license the component.
+            </summary>
+      <example>
+            In this example, an attempt will be made to find a license file named MyLicense.lic
+            in the folder that contains 
+            
+            
+            the component, in the folder that contains the calling assembly,
+            in the folder of the entry assembly and then in the embedded resources of the calling assembly.
+            <code>
+            [C#]
+            
+            License license = new License();
+            license.SetLicense("MyLicense.lic");
+            
+            
+            [Visual Basic]
+            
+            Dim license As license = New license
+            License.SetLicense("MyLicense.lic")
+            </code></example>
+    </member>
+    <member name="M:Aspose.BarCode.License.SetLicense(System.String)">
+      <summary>
+            Licenses the component.
+            </summary>
+      <remarks>
+        <p>Tries to find the license in the following locations:</p>
+        <p>1. Explicit path.</p>
+        <p>2. The folder that contains the Aspose component assembly.</p>
+        <p>3. The folder that contains the client's calling assembly.</p>
+        <p>4. The folder that contains the entry (startup) assembly.</p>
+        <p>5. An embedded resource in the client's calling assembly.</p>
+        <p>
+          <b>Note:</b>On the .NET Compact Framework, tries to find the license only in these locations:</p>
+        <p>1. Explicit path.</p>
+        <p>2. An embedded resource in the client's calling assembly.</p>
+      </remarks>
+      <example>
+            In this example, an attempt will be made to find a license file named MyLicense.lic
+            in the folder that contains 
+            
+            
+            the component, in the folder that contains the calling assembly,
+            in the folder of the entry assembly and then in the embedded resources of the calling assembly.
+            <code>
+            [C#]
+            
+            License license = new License();
+            license.SetLicense("MyLicense.lic");
+            
+            
+            [Visual Basic]
+            
+            Dim license As License = New License
+            license.SetLicense("MyLicense.lic")
+            </code><param name="licenseName">Can be a full or short file name or name of an embedded resource.
+            Use an empty string to switch to evaluation mode.</param></example>
+    </member>
+    <member name="M:Aspose.BarCode.License.SetLicense(System.IO.Stream)">
+      <summary>
+            Licenses the component.
+            </summary>
+      <param name="stream">A stream that contains the license.</param>
+      <remarks>
+        <p>Use this method to load a license from a stream.</p>
+      </remarks>
+      <example>
+        <code>
+            [C#]
+            
+            License license = new License();
+            license.SetLicense(myStream);
+            
+            
+            [Visual Basic]
+            
+            Dim license as License = new License
+            license.SetLicense(myStream)
+            </code>
+      </example>
+    </member>
+    <member name="T:Aspose.BarCode.BuildVersionInfo">
+      <summary>
+            Contains the current build version information.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.BuildVersionInfo.AssemblyVersion">
+      <summary>
+            The assembly version.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.BuildVersionInfo.FileVersion">
+      <summary>
+            The file version.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.BuildVersionInfo.Product">
+      <summary>
+            The product title.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.BuildVersionInfo.ProductMajor">
+      <summary>
+            The major product version.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.BuildVersionInfo.ProductMinor">
+      <summary>
+            The minor product version.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.BuildVersionInfo.ReleaseDate">
+      <summary>
+            The product release date.
+            </summary>
+    </member>
+    <member name="T:Aspose.BarCode.BarCodeException">
+      <summary>
+             Represents the exception for creating barcode image.
+            </summary>
+    </member>
+    <member name="M:Aspose.BarCode.BarCodeException.#ctor">
+      <summary>
+            Initilize an instance of <see cref="T:Aspose.BarCode.BarCodeException">BarCodeException</see> class
+            </summary>
+    </member>
+    <member name="M:Aspose.BarCode.BarCodeException.#ctor(System.String)">
+      <summary>
+            Initilize an instance of <see cref="T:Aspose.BarCode.BarCodeException">BarCodeException</see> class with specified error message.
+            </summary>
+      <param name="message">The error message of the exception.</param>
+    </member>
+    <member name="M:Aspose.BarCode.BarCodeException.#ctor(System.String,System.Exception)">
+      <summary>
+            Initilize an instance of <see cref="T:Aspose.BarCode.BarCodeException">BarCodeException</see> class with the specified error message and the current exception.
+            </summary>
+      <param name="message">The error message of the exception.</param>
+      <param name="innerException">The current exception is thrown.</param>
+    </member>
+    <member name="T:Aspose.BarCode.AustraliaPostFormatControlCode">
+      <summary>
+            Represents the Format Control Code Field of Australia Post BarCode
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.AustraliaPostFormatControlCode.Standard">
+      <summary>
+            Standard Customer BarCode
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.AustraliaPostFormatControlCode.ReplyPaid">
+      <summary>
+            Reply Paid BarCode
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.AustraliaPostFormatControlCode.Customer2">
+      <summary>
+            Customer BarCode 2
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.AustraliaPostFormatControlCode.Customer3">
+      <summary>
+            Customer BarCode 3
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.AustraliaPostFormatControlCode.Routing">
+      <summary>
+            Routing BarCode
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.AustraliaPostFormatControlCode.Redirection">
+      <summary>
+            Redirection BarCode
+            </summary>
+    </member>
+    <member name="T:Aspose.BarCode.BarCodeBuilder">
+      <summary>
+             BarCodeBuilder for backend barcode images generation.
+             
+             supported symbology: 
+             1D:
+             Codabar, Code11, Code128, Code39Standard, Code39Extended
+             Code93Standard, Code93Extended, EAN13, EAN8, Interleaved2of5, 
+             MSI, Standard2of5, UPCA, UPCE, ISBN, GS1Code128, Postnet, Planet
+             EAN14, SCC14, SSCC18, ITF14, SingaporePost
+             2D:
+             DataMatrix, PDf417, QR code
+             
+             </summary>
+      <example>
+            	 Create and save a BarCode image
+             <code>
+             [C#]
+            	  Aspose.BarCode.BarCode b = new BarCodeBuilder();
+            	  b.SymbologyType = Aspose.BarCode.SymbologyType.Codabar;
+            	  b.CodeText = "12345678";
+            	  b.BarCodeImage.Save("test.bmp");
+            </code>
+            	  
+            [VB.NET]
+            <code>
+            	  Dim b as Aspose.BarCode.BarCodeBuilder
+            	  b = new BarCodeBuilder()
+            	  b.CodeText = "12345678"
+            	  b.BarCodeImage.Save("test.bmp")
+            </code></example>
+    </member>
+    <member name="M:Aspose.BarCode.BarCodeBuilder.SetBinaryCodeText(System.Byte[])">
+      <summary>
+            Set the binary data to be encoded.
+            </summary>
+      <param name="codeText">The binary data to be encoded.</param>
+    </member>
+    <member name="M:Aspose.BarCode.BarCodeBuilder.#ctor">
+      <summary>
+            BarCodeBuilder's constructer, default SymbologyType is Code128, 
+            default CodeText is 12345678
+            </summary>
+    </member>
+    <member name="M:Aspose.BarCode.BarCodeBuilder.#ctor(System.String)">
+      <summary>
+            BarCodeBuilder's constructer, default SymbologyType is Code128
+            </summary>
+      <param name="codeText">string text data to be encoded</param>
+    </member>
+    <member name="M:Aspose.BarCode.BarCodeBuilder.#ctor(System.String,Aspose.BarCode.Symbology)">
+      <summary>
+            BarCodeBuilder's constructer
+            </summary>
+      <param name="codeText">string text data to be encoded</param>
+      <param name="type">BarCode's type: Aspose.BarCode.SymbologyType</param>
+    </member>
+    <member name="M:Aspose.BarCode.BarCodeBuilder.#ctor(System.ComponentModel.IContainer)">
+      <summary>
+            BarCodeBuilder's constructer, default SymbologyType is Code128, 
+            default CodeText is 12345678
+            </summary>
+      <param name="container">Add correct component to the container.</param>
+    </member>
+    <member name="M:Aspose.BarCode.BarCodeBuilder.Dispose(System.Boolean)">
+      <summary> 
+            Clean up any resources being used.
+            </summary>
+      <param name="disposing">true to release both managed and unmanaged resources; false to release only unmanaged resources.</param>
+    </member>
+    <member name="M:Aspose.BarCode.BarCodeBuilder.GenerateBarCodeImage">
+      <summary>
+            Generate the BarCode image under current settings
+            </summary>
+      <returns>BarCode Image See <see cref="T:System.Drawing.Bitmap" />.</returns>
+    </member>
+    <member name="M:Aspose.BarCode.BarCodeBuilder.ToString">
+      <summary>
+            overried to string method
+            </summary>
+      <returns>BarCode: SymbologyType: CodeText</returns>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.IsLicensed">
+      <summary>
+            Gets a value indicating whether generation module is licensed.
+            </summary>
+      <value>
+        <c>true</c> if generation module is licensed; otherwise, <c>false</c>.
+            </value>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.SymbologyType">
+      <summary>
+            BarCode's symbology, type: Aspose.BarCode.SymbologyType.
+            supported symbology: 
+            1D:
+            Codabar, Code11, Code128, Code39Standard, Code39Extended
+            Code93Standard, Code93Extended, EAN13, EAN8, Interleaved2of5, 
+            MSI, Standard2of5, UPCA, UPCE, EAN14, SCC14, SSCC18, ITF14, OneCode, SingaporePost
+            2D:
+            DataMatrix, PDf417,MacroPDF
+            </summary>
+      <example>
+            Create and save a BarCode image
+            <code>
+            [C#]
+              Aspose.BarCode.BarCodeBuilder b = new BarCodeBuilder();
+              b.SymbologyType = Aspose.BarCode.SymbologyType.Codabar;
+              b.CodeText = "12345678";
+              b.BarCodeImage.Save("test.bmp");
+              
+              [VB.NET]
+              Dim b as Aspose.BarCode.BarCodeBuilder
+              b = new BarCodeBuilder()
+              b.CodeText = "12345678"
+              b.BarCodeImage.Save("test.bmp")
+              </code></example>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.CodeText">
+      <summary>
+            Data to be encoded, different types of BarCode may have different CodeText length restrictions
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.EnableEscape" />. 
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextFont" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextColor" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeLocation" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextSpace" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextAlignment" />.
+            </summary>
+      <example>
+            Create and save a BarCode image
+            <code>
+            [C#]
+              Aspose.BarCode.BarCodeBuilder b = new BarCodeBuilder();
+              b.SymbologyType = Aspose.BarCode.SymbologyType.Codabar;
+              b.CodeText = "12345678";
+              b.BarCodeImage.Save("test.bmp");
+              
+              [VB.NET]
+              Dim b as Aspose.BarCode.BarCodeBuilder
+              b = new BarCodeBuilder()
+              b.CodeText = "12345678"
+              b.BarCodeImage.Save("test.bmp")
+              </code></example>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.Display2DText">
+      <summary>
+            Gets or sets the text will displayed on the barcode's image. Available only for 2D barcodes. Limited to 1000 chars.
+            </summary>
+      <value>
+            The text to display.
+            </value>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.CodeTextEncoding">
+      <summary>
+            Gets or sets the encoding of codetext.
+            </summary>
+      <value>
+            The encoding for codetext.
+            </value>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.EnableEscape">
+      <summary>
+            Indicates whether explains the character "\" as an escape character in CodeText property.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeText" />.
+            <note>If the EnableEscape is true, "\" will be explained as a special escape character. Otherwise, "\" acts as normal characters.</note><remarks>Aspose.BarCode supports inputing decimal ascii code and mnemonic for ASCII control-code characters, 0 through 31. For example, \013 and \CR stands for CR.</remarks></summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.CodeTextFont">
+      <summary>
+             Specify the displaying CodeText's font
+             See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeText" />.
+             See <see cref="T:System.Drawing.Font" />.
+             See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextColor" />.
+             See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeLocation" />.
+             See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextSpace" />.
+             See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextAlignment" />.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.CodeTextColor">
+      <summary>
+            Specify the displaying CodeText's Color
+            See <see cref="T:System.Drawing.Color" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeText" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextFont" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeLocation" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextSpace" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextAlignment" />.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.CodeLocation">
+      <summary>
+            Specify the displaying CodeText's Location, set to CodeLocation.None to hide CodeText.
+            CodeLocation will be ignored if SymbologyType is UPCE, UPCA, ISBN, EAN8 or EAN13
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeText" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextFont" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextSpace" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextColor" />
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextAlignment" />.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.CodeTextAlignment">
+      <summary>
+            Gets or sets the alignment of the code text. 
+            See <see cref="T:System.Drawing.StringAlignment" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeText" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextFont" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextColor" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextSpace" />.
+            </summary>
+      <remarks>
+            StringAlignment.Near means CodeText will be aligned to the left
+            StringAlignment.Far means CodeText will be aligned to the right
+            StringAlignment.Center means CodeText will be aligned to the center
+            </remarks>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.AutoSize">
+      <summary>
+            Wether ajust image's size automatically. Recommended: true
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.ImageWidth">
+      <summary>
+            BarCode image's width See <see cref="P:Aspose.BarCode.BarCodeBuilder.AutoSize" />., if AutoSize is true, ImageWidth will 
+            be increased accordingly
+            Default Graphics Unit: Millimeter 
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.ImageHeight">
+      <summary>
+            BarCode image's height See <see cref="P:Aspose.BarCode.BarCodeBuilder.AutoSize" />., if AutoSize is true, ImageHeight will
+            be increased accordingly
+            Default Graphics Unit: Millimeter 
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.BorderWidth">
+      <summary>
+            BarCode Image's border's width
+            Default Graphics Unit: Millimeter 
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.BorderVisible" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.BorderDashStyle" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.BorderColor" />.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.xDimension">
+      <summary>
+            x-dimension, smallest width unit of BarCode's bars or spaces.
+            increase this will increase the whole barcode image's width if AutoSize is true
+            Default Graphics Unit: Millimeter 
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.yDimension" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.AutoSize" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.BarHeight" />.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.yDimension">
+      <summary>
+            y-dimension, smallest height unit of 2D BarCode's modules. 
+            Some square symbols (such as DataMatrix) may ignore this and
+            use x-dimension for both width unit and height unit
+            
+            In 2D barcode, y-dimension * rows determines BarCode's height
+            In 1D barcode, BarHeight determines BarCode's height.
+            Default Graphics Unit: Millimeter 
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.xDimension" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.BarHeight" />.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.BarHeight">
+      <summary>
+            height of 1D barcodes' bars.
+            In 2D barcode, y-dimension * rows determines BarCode's height
+            In 1D barcode, BarHeight determines BarCode's height.
+            Default Graphics Unit: Millimeter 
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.yDimension" />.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.AspectRatio">
+      <summary>
+            2D BarCode's module's height/width ratio (yDimension/xDimension). 
+            calculated based on xDimension set to 0 means 
+            not using this feature.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.xDimension" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.yDimension" />.
+            </summary>
+      <remarks>
+            Some 2D BarCodes are square shaped, then AspectRatio is not appliable
+            </remarks>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.Margins">
+      <summary>
+            Margin area around the core BarCode image
+            If AutoSize is false, then Width and Height is fixed, thus Margins setting will be ignored
+            Default Graphics Unit: Millimeter 
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.SupplementSpace">
+      <summary>
+            Space between main the BarCode and supplement BarCode, default Graphics Unit: millimeter
+            See <see cref="T:System.Drawing.GraphicsUnit" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.SupplementData" />.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.PostnetShortBarHeight">
+      <summary>
+            Short bar's height of Postnet barcode, it has to be between 1 millimeter and 1.5 milimeter (0.04 inch and 0.06 inch). To set up tall bar's height, see BarHeight, which has to be between 8.28 milimeter and 9.72 milimeter (0.115 inch and 0.135 inch)
+            see changing See <see cref="T:System.Drawing.GraphicsUnit">GraphicsUnit</see>.
+            see setting tall bar's height: See <see cref="P:Aspose.BarCode.BarCodeBuilder.BarHeight">BarHeight</see>.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.PlanetShortBarHeight">
+      <summary>
+            Short bar's height of Planet barcode, it has to be between 1 millimeter and 1.5 milimeters.
+            see changing See <see cref="T:System.Drawing.GraphicsUnit">GraphicsUnit</see>.
+            see setting tall bar's height: See <see cref="P:Aspose.BarCode.BarCodeBuilder.BarHeight">BarHeight</see>.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.CodeTextSpace">
+      <summary>
+            Space between the CodeText and the BarCode.
+            Default Graphics Unit: Millimeter 
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeText" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeLocation" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextFont" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextColor" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodeTextAlignment" />.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.BarCodeImage">
+      <summary>
+            Get the BarCode image under current settings
+            </summary>
+      <example>
+        <code>
+            [C#]
+            Aspose.BarCode.BarCodeBuilder b = new BarCodeBuilder();
+            b.CodeText = "12345678";
+            b.SymbologyType = Aspose.BarCode.SymbologyType.Codabar;
+            b.BarCodeImage.Save("test.bmp");
+            
+            [VB.NET]
+            dim b as Aspose.BarCode.BarCodeBuilder
+            b = new BarCodeBuilder()
+            b.CodeText = "12345678"
+            b.SymbologyType = Aspose.BarCode.SymbologyType.Codabar
+            b.BarCodeImage.Save("test.bmp")
+            </code>
+      </example>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.BorderVisible">
+      <summary>
+            Gets or sets a value indicating whether [border visible].
+            </summary>
+      <value>
+        <c>true</c> if [border visible]; otherwise, <c>false</c>.
+            </value>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.BorderColor">
+      <summary>
+            BarCode Image's border's color
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.BorderWidth" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.BorderVisible" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.BorderDashStyle" /></summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.BorderDashStyle">
+      <summary>
+            BarCode Image's border's style
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.BorderWidth" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.BorderVisible" />.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.BorderColor" /></summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.CodabarStartSymbol">
+      <summary>
+            Start symbol (character) of codabar symbology
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodabarStopSymbol" />.
+            </summary>
+      <example>
+        <code>
+             [C#]
+             Aspose.BarCode.BarCodeBuilder b = new BarCodeBuilder();
+            b.SymbologyType = Aspose.BarCode.SymbologyType.Codabar;
+            b.CodabarStartSymbol = CodabarSymbol.A;
+            b.CodabarStopSymbol = CodabarSymbol.B;
+            b.CodeText = "123456";
+            
+            [VB.NET]
+            dim b as Aspose.BarCode.BarCodeBuilder
+            b = new BarCodeBuilder()
+            b.SymbologyType = Aspose.BarCode.SymbologyType.Codabar
+            b.CodabarStartSymbol = CodabarSymbol.A
+            b.CodabarStopSymbol = CodabarSymbol.A
+            b.CodeText = "123456"
+             </code>
+      </example>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.CodabarStopSymbol">
+      <summary>
+            Stop symbol (character) of codabar symbology
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.CodabarStartSymbol" />.
+            </summary>
+      <example>
+        <code>
+             [C#]
+             Aspose.BarCode.BarCodeBuilder b = new BarCodeBuilder();
+            b.SymbologyType = Aspose.BarCode.SymbologyType.Codabar;
+            b.CodabarStartSymbol = CodabarSymbol.A;
+            b.CodabarStopSymbol = CodabarSymbol.B;
+            b.CodeText = "123456";
+            
+            [VB.NET]
+            dim b as Aspose.BarCode.BarCodeBuilder
+            b = new BarCodeBuilder()
+            b.SymbologyType = Aspose.BarCode.SymbologyType.Codabar
+            b.CodabarStartSymbol = CodabarSymbol.A
+            b.CodabarStopSymbol = CodabarSymbol.A
+            b.CodeText = "123456"
+             </code>
+      </example>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.Code128CodeSet">
+      <summary>
+            Code128 symbology type of barcode's code set, default to Code128CodeSet.Auto"
+            </summary>
+      <example>
+             [C#]
+             Aspose.BarCode.BarCodeBuilder b = new BarCodeBuilder();
+            b.SymbologyType = Aspose.BarCode.SymbologyType.Code128;
+            b.Code128CodeSet = Code128CodeSet.Auto;
+            b.CodeText = "123456";
+            
+            [VB.NET]
+            dim b as Aspose.BarCode.BarCodeBuilder
+            b = new BarCodeBuilder()
+            b.SymbologyType = Aspose.BarCode.SymbologyType.Code128
+            b.Code128CodeSet = Code128CodeSet.Auto;
+            b.CodeText = "123456"
+            </example>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.AustraliaPostFormatControlCode">
+      <summary>
+            Australia Post symbology type of barcode's FormatControlCode, default to AustraliaPostFormatControlCode.Standard"
+            </summary>
+      <example>
+             [C#]
+             Aspose.BarCode.BarCodeBuilder b = new BarCodeBuilder();
+            b.SymbologyType = Aspose.BarCode.SymbologyType.AustraliaPost;
+            b.AustraliaPostFormatControlCode = AustraliaPostFormatControlCode.Standard;
+            b.CodeText = "12345678";
+            
+            [VB.NET]
+            dim b as Aspose.BarCode.BarCodeBuilder
+            b = new BarCodeBuilder()
+            b.SymbologyType = Aspose.BarCode.SymbologyType.AustraliaPost
+            b.AustraliaPostFormatControlCode = AustraliaPostFormatControlCode.Standard
+            b.CodeText = "12345678"
+            </example>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.ITF14BorderType">
+      <summary>
+            Border type of ITF14 barcode, quiet zone will be determined by margin settings.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.ForeColor">
+      <summary>
+            Foreground color of the barcode image, that is, 
+            Bar's color of 1D barcode, Module's color of 2D barcode
+            See <see cref="T:System.Drawing.Color" />.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.BackColor">
+      <summary>
+            Background color of the barcode image
+            See <see cref="T:System.Drawing.Color" />.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.EnableChecksum">
+      <summary>
+        <para>Enable checksum during generation for 1D barcodes.</para>
+        <para>Default is treated as Yes for symbologies which must contain checksum, as No where checksum only possible.</para>
+        <para>Checksum never used: Codabar</para>
+        <para>Checksum is possible: Code39 Standard/Extended, Standard2of5, Interleaved2of5, Matrix2of5, ItalianPost25, DeutschePostIdentcode, DeutschePostLeitcode, VIN</para>
+        <para>Checksum always used: Rest symbologies</para>
+      </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.Columns">
+      <summary>
+            2D BarCode's columns, if setting is illegal then columns will be calculated automatically
+            appliable SymbologyType: Pdf417
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.Rows">
+      <summary>
+            2D BarCode's rows, if setting is illegal then rows will be calculated automatically. 
+            appliable SymbologyType: Pdf417
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.DataMatrixEncodeMode">
+      <summary>
+            Encode mode of Datamatrix barcode, default to Auto
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.Pdf417CompactionMode">
+      <summary>
+            Pdf417 symbology type of BarCode's compaction mode, default compaction mode is <bode>Auto</bode></summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.Pdf417Truncate">
+      <summary>
+            whether pdf417 symbology type of BarCode is truncated (to reduce space)
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.Pdf417ErrorLevel">
+      <summary>
+            Gets or sets Pdf417 symbology type of BarCode's error coccrection level
+            ranging from level0 to level8, level0 means no error correction info, 
+            level8 means best error correction which means a larger picture
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.MacroPdf417SegmentsCount">
+      <summary>
+            Gets or sets macro pdf417 barcode segments count.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.MacroPdf417SegmentID">
+      <summary>
+            Gets or sets macro pdf417 barcode's segment ID, which starts from 0, to MacroPdf417SegmentCount - 1.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.MacroPdf417FileID">
+      <summary>
+            Gets or sets macro pdf417 barcode's file ID.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.WideNarrowRatio">
+      <summary>
+            Wide bars to Narrow bars ratio for some 1D BarCode. 
+            Default WideNarrowRatio:3, that is, wide bars are 3 times as wide as narrow bars
+            Appliable symbology: Code39Extended, Code39Standard, Standard2of5, Interleaved2of5, Pharmacode
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.SupplementData">
+      <summary>
+            Supplement data following BarCodes of symbology UPCA, UPCE, EAN13, EAN8, ISBN, Interleaved2of5 or Standard2of5.
+            See <see cref="P:Aspose.BarCode.BarCodeBuilder.SupplementSpace" />.
+            </summary>
+      <example>
+        <code>
+            [C#]
+            Aspose.BarCode.BarCodeBuilder b;
+            b = new BarCodeBuilder();
+            b.SymbologyType = SymbologyType.UPCE;
+            b.CodeText = "123456";
+            b.SupplementData = "11";
+            b.BarCodeImage.Save("tmp.bmp");
+            
+            [VB.NET]
+            Dim b as Aspose.BarCode.BarCodeBuilder
+            b = new BarCodeBuilder()
+            b.SymbologyType = SymbologyType.UPCE
+            b.SupplementData = "11"
+            b.BarCodeImage.Save("tmp.bmp");
+            </code>
+      </example>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.QRErrorLevel">
+      <summary>
+             Level of Reed-Solomon error correction for QR barcode. From low to high: LevelL, LevelM, LevelQ, LevelH. see QRErrorLevel.
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.QREncodeMode">
+      <summary>
+            QR symbology type of BarCode's encoding mode, default mode is <bode>Auto</bode></summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.AztectErrorLevel">
+      <summary>
+            Level of error corection of Aztect types of barcode. value should between 10 to 95
+            </summary>
+    </member>
+    <member name="P:Aspose.BarCode.BarCodeBuilder.AlwaysShowChecksum">
+      <summary>
+             Always display checksum digit in the humanreadable text for Code128 and GS1Code128 barcodes.
+            </summary>
+    </member>
+    <member name="T:Aspose.BarCode.BorderDashStyle">
+      <summary>
+            Specifies the style of dashed border lines.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.BorderDashStyle.Solid">
+      <summary>
+            Specifies a solid line.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.BorderDashStyle.Dash">
+      <summary>
+            Specifies a line consisting of dashes.
+            </summary>
+    </member>
+    <member name="T:Aspose.BarCode.CodabarSymbol">
+      <summary>
+            Specifies the start or stop symbol of the Codabar barcode specification.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.CodabarSymbol.A">
+      <summary>
+            Specifies character A as the start or stop symbol of the Codabar barcode specification.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.CodabarSymbol.B">
+      <summary>
+            Specifies character B as the start or stop symbol of the Codabar barcode specification.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.CodabarSymbol.C">
+      <summary>
+            Specifies character C as the start or stop symbol of the Codabar barcode specification.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.CodabarSymbol.D">
+      <summary>
+            Specifies character D as the start or stop symbol of the Codabar barcode specification.
+            </summary>
+    </member>
+    <member name="T:Aspose.BarCode.Code128CodeSet">
+      <summary>
+            Specifies the code set of CODE128 barcode specification used to encode the data. 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Code128CodeSet.A">
+      <summary>
+            Specifies code set <b>A</b> should be used to encode the data in the CODE128 specification.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Code128CodeSet.B">
+      <summary>
+            Specifies code set <b>B</b> should be used to encode the data in the CODE128 specification.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Code128CodeSet.C">
+      <summary>
+            Specifies code set <b>C</b> should be used to encode the data in the CODE128 specification.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Code128CodeSet.Auto">
+      <summary>
+            Specifies using the embeded optimized arithmetic to encode the data, which will use the shortest encoding result.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Code128CodeSet.Customized">
+      <summary>
+            Specifies using the customized codeset.
+            </summary>
+    </member>
+    <member name="T:Aspose.BarCode.CodeLocation">
+      <summary>
+            Specifies the location of the code text shown in the image.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.CodeLocation.Above">
+      <summary>
+            Specifies that the code text is shown on the top of the bar code.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.CodeLocation.Below">
+      <summary>
+            Specifies that the code text is shown on the bottom of the bar code.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.CodeLocation.None">
+      <summary>
+            Specifies that the code text is hidden. 
+            </summary>
+    </member>
+    <member name="T:Aspose.BarCode.DataMatrixEncodeMode">
+      <summary>
+            DataMatrix encoder's encoding mode, default to Auto
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.DataMatrixEncodeMode.Auto">
+      <summary>
+            Automatically pick up the best encode mode for datamatrix encoding
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.DataMatrixEncodeMode.ASCII">
+      <summary>
+            Encodes one alphanumeric or two numeric characters per byte
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.DataMatrixEncodeMode.Full">
+      <summary>
+            Encode 8 bit values
+            </summary>
+    </member>
+    <member name="T:Aspose.BarCode.EnableChecksum">
+      <summary>
+        <para>Enable checksum during generation for 1D barcodes.</para>
+        <para>Default is treated as Yes for symbologies which must contain checksum, as No where checksum only possible.</para>
+        <para>Checksum never used: Codabar</para>
+        <para>Checksum is possible: Code39 Standard/Extended, Standard2of5, Interleaved2of5, Matrix2of5, ItalianPost25, DeutschePostIdentcode, DeutschePostLeitcode, VIN</para>
+        <para>Checksum always used: Rest symbologies</para>
+      </summary>
+    </member>
+    <member name="F:Aspose.BarCode.EnableChecksum.Default">
+      <summary>
+            If checksum is required by the specification - it will be attached.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.EnableChecksum.Yes">
+      <summary>
+            Always use checksum if possible.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.EnableChecksum.No">
+      <summary>
+            Do not use checksum.
+            </summary>
+    </member>
+    <member name="T:Aspose.BarCode.ImageQualityMode">
+      <summary>
+            Specifies the quality of the created barcode image. Only appliable to Jpeg format, such as save as .jpg files
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.ImageQualityMode.Default">
+      <summary>
+            Specifies No anti-aliasing image rendering.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.ImageQualityMode.AntiAlias">
+      <summary>
+            Specifeis Anti-aliased image rendering. Much better quality due to antialiasing, but at a higher performance cost.
+            </summary>
+    </member>
+    <member name="T:Aspose.BarCode.ITF14BorderType">
+      <summary>
+            ITF14 barcode's border type
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.ITF14BorderType.None">
+      <summary>
+            No border enclosing the barcode
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.ITF14BorderType.Frame">
+      <summary>
+            Frame enclosing the barcode
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.ITF14BorderType.Bar">
+      <summary>
+            Tow horizontal bars enclosing the barcode
+            </summary>
+    </member>
+    <member name="T:Aspose.BarCode.Pdf417CompactionMode">
+      <summary>
+            Pdf417 barcode's compation mode
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Pdf417CompactionMode.Auto">
+      <summary>
+            auto detect compation mode
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Pdf417CompactionMode.Text">
+      <summary>
+            text compaction
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Pdf417CompactionMode.Numeric">
+      <summary>
+            numeric compaction mode
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Pdf417CompactionMode.Binary">
+      <summary>
+            binary compaction mode
+            </summary>
+    </member>
+    <member name="T:Aspose.BarCode.Pdf417ErrorLevel">
+      <summary>
+            pdf417 barcode's error correction level, from level 0 to level 9, level 0 means no error correction, level 9 means best error correction
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Pdf417ErrorLevel.Level0">
+      <summary>
+            level = 0.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Pdf417ErrorLevel.Level1">
+      <summary>
+            level = 1.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Pdf417ErrorLevel.Level2">
+      <summary>
+            level = 2.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Pdf417ErrorLevel.Level3">
+      <summary>
+            level = 3.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Pdf417ErrorLevel.Level4">
+      <summary>
+            level = 4.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Pdf417ErrorLevel.Level5">
+      <summary>
+            level = 5.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Pdf417ErrorLevel.Level6">
+      <summary>
+            level = 6.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Pdf417ErrorLevel.Level7">
+      <summary>
+            level = 7.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Pdf417ErrorLevel.Level8">
+      <summary>
+            level = 8.
+            </summary>
+    </member>
+    <member name="T:Aspose.BarCode.QREncodeMode">
+      <summary>
+            QR barcode's encoding mode
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.QREncodeMode.Auto">
+      <summary>
+            auto detect the mode
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.QREncodeMode.Numeric">
+      <summary>
+            numeric mode
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.QREncodeMode.AlphaNumber">
+      <summary>
+            AlphaNumber mode, include A-Z, 0-9 and the SP, $, %, *, +, -, ., / and :
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.QREncodeMode.Binary">
+      <summary>
+            8-bit binary mode
+            </summary>
+    </member>
+    <member name="T:Aspose.BarCode.QRErrorLevel">
+      <summary>
+            Level of Reed-Solomon error correction. From low to high: LevelL, LevelM, LevelQ, LevelH.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.QRErrorLevel.LevelL">
+      <summary>
+            Allows recovery of 7% of the code text
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.QRErrorLevel.LevelM">
+      <summary>
+            Allows recovery of 15% of the code text
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.QRErrorLevel.LevelQ">
+      <summary>
+            Allows recovery of 25% of the code text
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.QRErrorLevel.LevelH">
+      <summary>
+            Allows recovery of 30% of the code text
+            </summary>
+    </member>
+    <member name="T:Aspose.BarCode.RotationDirection">
+      <summary>
+            Rotation Direction, must be the following: Clockwise or AntiClockwise
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.RotationDirection.Clockwise">
+      <summary>
+            clock wise rotate
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.RotationDirection.AntiClockwise">
+      <summary>
+            anti clockwise rotate
+            </summary>
+    </member>
+    <member name="T:Aspose.BarCode.Margins">
+      <summary>
+            Specifies the margins of a barcode image.
+            </summary>
+      <remarks>
+        <p>This class is used to manipulate margins in barcode image.</p>
+        <p>
+          <b>
+            <I>Note</I>
+          </b>: The actual amount of the margins are determined by the specified mesure <see cref="T:System.Drawing.GraphicsUnit">unit</see> of the barcode image.</p>
+        <p>
+          <see cref="P:Aspose.BarCode.Margins.Left">Left</see>, <see cref="P:Aspose.BarCode.Margins.Right">Right</see>, <see cref="P:Aspose.BarCode.Margins.Top">Top</see>, and <see cref="P:Aspose.BarCode.Margins.Bottom">Bottom</see> are properties that define the margins.</p>
+        <p>
+          <see cref="M:Aspose.BarCode.Margins.Equals(System.Object)">Equals</see> determines if another object is equal to a <b>Margins</b> object.</p>
+      </remarks>
+    </member>
+    <member name="M:Aspose.BarCode.Margins.Set(System.Int32)">
+      <summary>
+            Sets the specified margin for all sides.
+            </summary>
+      <param name="margin">The margin for all sides.</param>
+    </member>
+    <member name="M:Aspose.BarCode.Margins.Set(System.Int32,System.Int32,System.Int32,System.Int32)">
+      <summary>
+            Sets the specified margins.
+            </summary>
+      <param name="left">The left side.</param>
+      <param name="right">The right side.</param>
+      <param name="top">The top side.</param>
+      <param name="bottom">The bottom side.</param>
+    </member>
+    <member name="M:Aspose.BarCode.Margins.Equals(System.Object)">
+      <summary>
+            Determines whether two <see cref="T:Aspose.BarCode.Margins">Margins</see> instances are equal.
+            </summary>
+      <param name="obj">The <see cref="T:Aspose.BarCode.Margins">Margins</see> instance on the left</param>
+      <returns>
+        <b>true</b> if the left <see cref="T:Aspose.BarCode.Margins">Margins</see> instances is equal to the right one; otherwise, <b>false</b>.</returns>
+    </member>
+    <member name="M:Aspose.BarCode.Margins.GetHashCode">
+      <summary>
+            Serves as a hash function for a particular type, suitable for use in hashing algorithms and data structures like a hash table.
+            </summary>
+      <returns>A hash code for the current Object.</returns>
+    </member>
+    <member name="M:Aspose.BarCode.Margins.ToString">
+      <summary>
+            Returns a String that represents the current <see cref="T:Aspose.BarCode.Margins">Margins</see> instance.
+            </summary>
+      <returns>A <see cref="T:System.String">String</see> that represents the current Object.</returns>
+    </member>
+    <member name="P:Aspose.BarCode.Margins.Bottom">
+      <summary>
+            Gets or sets the <b>bottom</b> marign.
+            </summary>
+      <exception cref="T:System.ArgumentException">
+        <p>The <b>bottom</b> parameter value is less than 0.</p>
+      </exception>
+    </member>
+    <member name="P:Aspose.BarCode.Margins.Left">
+      <summary>
+            Gets or sets the <b>left</b> margin.
+            </summary>
+      <exception cref="T:System.ArgumentException">
+        <p>The <b>Left</b> parameter value is less than 0.</p>
+      </exception>
+    </member>
+    <member name="P:Aspose.BarCode.Margins.Right">
+      <summary>
+            Gets or sets the <b>right</b> margin.
+            </summary>
+      <exception cref="T:System.ArgumentException">
+        <p>The <b>Right</b> parameter value is less than 0.</p>
+      </exception>
+    </member>
+    <member name="P:Aspose.BarCode.Margins.Top">
+      <summary>
+            Gets or sets the <b>top</b> marign.
+            </summary>
+      <exception cref="T:System.ArgumentException">
+        <p>The <b>Top</b> parameter value is less than 0.</p>
+      </exception>
+    </member>
+    <member name="T:Aspose.BarCode.InvalidCodeException">
+      <summary>
+            The Exception will be thrown when invalid characters contained in the code text.
+            </summary>
+    </member>
+    <member name="M:Aspose.BarCode.InvalidCodeException.#ctor(System.String)">
+      <summary>
+            Initializes a new instance of the InvalidCodeException class with a specified error message.
+            </summary>
+      <param name="message">A String that describes the error.</param>
+    </member>
+    <member name="T:Aspose.BarCode.Symbology">
+      <summary>
+            Specifies the type of barcode specification.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.Codabar">
+      <summary>
+            Specifies that the data should be encoded with <b>CODABAR</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.Code11">
+      <summary>
+            Specifies that the data should be encoded with <b>CODE 11</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.Code39Standard">
+      <summary>
+            Specifies that the data should be encoded with <b>Standard CODE 39</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.Code39Extended">
+      <summary>
+            Specifies that the data should be encoded with <b>Extended CODE 39</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.Code93Standard">
+      <summary>
+            Specifies that the data should be encoded with <b>Standard CODE 93</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.Code93Extended">
+      <summary>
+            Specifies that the data should be encoded with <b>Extended CODE 93</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.Code128">
+      <summary>
+            Specifies that the data should be encoded with <b>CODE 128</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.GS1Code128">
+      <summary>
+            Specifies that the data should be encoded with <b>GS1 Code 128</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.EAN8">
+      <summary>
+            Specifies that the data should be encoded with <b>EAN-8</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.EAN13">
+      <summary>
+            Specifies that the data should be encoded with <b>EAN-13</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.EAN14">
+      <summary>
+            Specifies that the data should be encoded with <b>EAN14</b> barcode specification
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.SCC14">
+      <summary>
+            Specifies that the data should be encoded with <b>SCC14</b> barcode specification
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.SSCC18">
+      <summary>
+            Specifies that the data should be encoded with <b>SSCC18</b> barcode specification
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.UPCA">
+      <summary>
+            Specifies that the data should be encoded with <b>UPC-A</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.UPCE">
+      <summary>
+            Specifies that the data should be encoded with <b>UPC-E</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.ISBN">
+      <summary>
+            Specifies that the data should be encoded with <b>ISBN</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.ISSN">
+      <summary>
+            Specifies that the data should be encoded with <b>ISSN</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.ISMN">
+      <summary>
+            Specifies that the data should be encoded with <b>ISMN</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.Standard2of5">
+      <summary>
+            Specifies that the data should be encoded with <b>Standard 2 of 5</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.Interleaved2of5">
+      <summary>
+            Specifies that the data should be encoded with <b>INTERLEAVED 2 of 5</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.Matrix2of5">
+      <summary>
+            Represents Matrix 2 of 5 BarCode
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.ItalianPost25">
+      <summary>
+            Represents Italian Post 25 barcode.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.IATA2of5">
+      <summary>
+            Represents IATA 2 of 5 barcode.IATA (International Air Transport Assosiation) uses this barcode for the management of air cargo.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.ITF14">
+      <summary>
+            Specifies that the data should be encoded with <b>ITF14</b> barcode specification
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.ITF6">
+      <summary>
+            Represents ITF-6  Barcode.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.MSI">
+      <summary>
+            Specifies that the data should be encoded with <b>MSI Plessey</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.VIN">
+      <summary>
+            Represents VIN (Vehicle Identification Number) Barcode.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.DeutschePostIdentcode">
+      <summary>
+            Represents Deutschen Post barcode, This Symbology is also known as Identcode,CodeIdentcode,German Postal 2 of 5 Identcode, 
+            Deutsche Post AG Identcode, Deutsche Frachtpost Identcode,  Deutsche Post AG (DHL)
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.DeutschePostLeitcode">
+      <summary>
+            Represents Deutsche Post Leitcode Barcode,also known as German Postal 2 of 5 Leitcode, CodeLeitcode, Leitcode, Deutsche Post AG (DHL).
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.OPC">
+      <summary>
+            Represents OPC(Optical Product Code) Barcode,also known as , VCA Barcode VCA OPC, Vision Council of America OPC Barcode.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.PZN">
+      <summary>
+            Represents PZN barcode.This Symbology is also known as Pharma Zentral Nummer,Pharmazentralnummer
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.Pharmacode">
+      <summary>
+            Represents Pharmacode barcode. This Symbology is also known as Code32
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.DataMatrix">
+      <summary>
+            2D barcode symbology DataMatrix
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.QR">
+      <summary>
+            Specifies that the data should be encoded with <b>QR Code</b> barcode specification
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.Aztec">
+      <summary>
+            Specifies that the data should be encoded with <b>Aztec</b> barcode specification
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.Pdf417">
+      <summary>
+            Specifies that the data should be encoded with <b>Pdf417</b> barcode specification
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.MacroPdf417">
+      <summary>
+            Specifies that the data should be encoded with <b>MacroPdf417</b> barcode specification
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.AustraliaPost">
+      <summary>
+            Represents Australia Post Customer BarCode
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.Postnet">
+      <summary>
+            Specifies that the data should be encoded with <b>Postnet</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.Planet">
+      <summary>
+            Specifies that the data should be encoded with <b>Planet</b> barcode specification
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.OneCode">
+      <summary>
+            Specifies that the data should be encoded with USPS <b>OneCode</b> barcode specification
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.RM4SCC">
+      <summary>
+            Represents RM4SCC barcode. RM4SCC (Royal Mail 4-state Customer Code) is used for automated mail sort process in UK.
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.DatabarOmniDirectional">
+      <summary>
+            Specifies that the data should be encoded with <b> Databar omni-directional</b> barcode specification
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.DatabarTruncated">
+      <summary>
+            Specifies that the data should be encoded with <b> Databar truncated</b> barcode specification
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.DatabarLimited">
+      <summary>
+            Represents Databar limited barcode
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.DatabarExpanded">
+      <summary>
+            Represents Databar expanded barcode
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.SingaporePost">
+      <summary>
+            Specifies that the data should be encoded with <b>Singapore Post Barcode</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.GS1DataMatrix">
+      <summary>
+            2D barcode symbology DataMatrix with GS1 string format
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.AustralianPosteParcel">
+      <summary>
+            Specifies that the data should be encoded with <b>Australian Post Domestic eParcel Barcode</b> barcode specification 
+            </summary>
+    </member>
+    <member name="F:Aspose.BarCode.Symbology.SwissPostParcel">
+      <summary>
+            Specifies that the data should be encoded with <b>Swiss Post Parcel Barcode</b> barcode specification. Supported types: Domestic Mail, International Mail, Additional Services (new) 
+            </summary>
+    </member>
+  </members>
+</doc>
