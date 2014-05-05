@@ -68,5 +68,42 @@ namespace Loan.Data
             return database.Update<BranchCompany>(strSql, paras);
         }
         #endregion
+
+        #region 根据分公司ID获取分公司
+        /// <summary>
+        /// 根据分公司ID获取分公司
+        /// </summary>
+        /// <remarks>
+        /// 创建：李真 2014-05-06
+        /// </remarks>
+        /// <param name="id">分公司ID</param>
+        /// <returns></returns>
+        public BranchCompany GetBranchCompanyByID(int id)
+        {
+            string sql = string.Format("SELECT * FROM branchcompany WHERE BranchCompanyID=@id");
+            SqlParameter[] paras = new SqlParameter[] 
+            { 
+                new SqlParameter("@id", id)
+            };
+
+            return database.FirstOrDefault<BranchCompany>(sql.TryString(), paras);
+        }
+        #endregion
+
+        #region 修改分公司
+        /// <summary>
+        /// 修改分公司
+        /// </summary>
+        /// <remarks>
+        /// 创建：李真 2014-05-06
+        /// </remarks>
+        /// <param name="branchCompany">分公司实体</param>
+        /// <returns></returns>
+        public int Update(BranchCompany branchCompany)
+        {
+            var result = database.Update("branchcompany", "branchcompanyID", true, branchCompany);
+            return result.TryInt();
+        }
+        #endregion
     }
 }

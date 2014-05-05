@@ -97,6 +97,7 @@ namespace Loan.Web.Controllers
         /// <param name="id">分公司ID</param>
         /// <param name="pageindex">列表当前页码</param>
         /// <returns></returns>
+        [HttpPost]
         public ActionResult Lock(int id, int pageindex)
         {
             int result = branchCompanyLogic.ChangeStatus(id, GlobalConst.Status.Locked);
@@ -124,6 +125,7 @@ namespace Loan.Web.Controllers
         /// <param name="id">分公司ID</param>
         /// <param name="pageindex">列表当前页码</param>
         /// <returns></returns>
+        [HttpPost]
         public ActionResult UnLock(int id, int pageindex)
         {
             int result = branchCompanyLogic.ChangeStatus(id, GlobalConst.Status.Normal);
@@ -151,6 +153,7 @@ namespace Loan.Web.Controllers
         /// <param name="id">分公司ID</param>
         /// <param name="pageindex">列表当前页码</param>
         /// <returns></returns>
+        [HttpPost]
         public ActionResult Delete(int id, int pageindex)
         {
             int result = branchCompanyLogic.ChangeStatus(id, GlobalConst.Status.Normal);
@@ -170,6 +173,69 @@ namespace Loan.Web.Controllers
                 info = branchCompanyLogic.GetList(GlobalConst.PAGESIZE, pageindex);
             }
             return View("GetList", info.Items.ToPagedList(pageindex, GlobalConst.PAGESIZE, info.TotalItems.TryInt()));
+        }
+        #endregion
+
+        #region 编辑
+        /// <summary>
+        /// 编辑分公司
+        /// </summary>
+        /// <remarks>
+        /// 创建:李真 2014-05-06
+        /// </remarks>
+        /// <returns></returns>
+        public ActionResult Edit(int id)
+        {
+            ViewBag.Function = "分公司管理";
+            ViewBag.FunctionURL = "/BranchCompany/Edit";
+            ViewBag.FunctionName = "编辑分公司";
+            ViewBag.FunctionNameURL = "/BranchCompany/Edit";
+            ViewBag.FunctionDescription = "";
+            ViewBag.NavShowStylePageURL = "/BranchCompany/Edit_Horizontal";
+
+            BranchCompany branchCompany = branchCompanyLogic.GetBranchCompanyByID(id);
+            BranchCompanyVModel branchCompanyV = new BranchCompanyVModel();
+            if (null != branchCompany)
+            {
+                branchCompanyV.Name = branchCompany.Name;
+                branchCompanyV.Address = branchCompany.Address;
+                branchCompanyV.PostCode = branchCompany.PostCode;
+                branchCompanyV.Description = branchCompany.Description;
+            }
+
+            return View("Edit", branchCompanyV);
+        }
+        #endregion
+
+        #region 编辑
+        /// <summary>
+        /// 编辑分公司
+        /// </summary>
+        /// <remarks>
+        /// 创建:李真 2014-05-06
+        /// </remarks>
+        /// <returns></returns>
+        [HttpPost]
+        public ActionResult Edit(BranchCompanyVModel branchCompanyV)
+        {
+            if (ModelState.IsValid)
+            {
+                BranchCompany branchCompany = new BranchCompany();
+                branchCompany.BranchCompanyID = branchCompanyV.branchCompanyID;
+                branchCompany.Name = branchCompanyV.Name;
+                branchCompany.Address = branchCompanyV.Address;
+                branchCompany.PostCode = branchCompanyV.PostCode;
+                branchCompany.Description = branchCompanyV.Description;
+
+                int iResult = branchCompanyLogic.Edit(branchCompany);
+                if (iResult >= 0)
+                {
+                    //修改成功
+                    ViewBag.AlertMessage = "修改成功";
+                    return View("GetList");
+                }
+            }
+            return View(branchCompanyV);
         }
         #endregion
     }

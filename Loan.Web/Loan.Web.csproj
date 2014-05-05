@@ -2314,6 +2314,7 @@
     <Content Include="Views\BranchCompany\Add.cshtml" />
     <Content Include="Views\BranchCompany\GetList.cshtml" />
     <Content Include="Views\BranchCompany\aaa.cshtml" />
+    <Content Include="Views\BranchCompany\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

@@ -32,7 +32,7 @@ namespace Loan.Logic
             }
             catch (Exception ex)
             {
-                _logger.Error(string.Format("新增分公司发生异常."));
+                _logger.Error(string.Format("新增分公司发生异常.", ex.Message));
                 return -200;
             }
         }
@@ -56,7 +56,7 @@ namespace Loan.Logic
             }
             catch (Exception ex)
             {
-                _logger.Error(string.Format("获取分公司列表发生异常."));
+                _logger.Error(string.Format("获取分公司列表发生异常.", ex.Message));
                 return null;
             }
         }
@@ -80,7 +80,53 @@ namespace Loan.Logic
             }
             catch (Exception ex)
             {
-                _logger.Error(string.Format("更新分公司状态发生异常."));
+                _logger.Error(string.Format("更新分公司状态发生异常.", ex.Message));
+                return -200;
+            }
+        }
+        #endregion
+
+        #region 修改分公司
+        /// <summary>
+        /// 修改分公司
+        /// </summary>
+        /// <remarks>
+        /// 创建：李真 2014-05-06
+        /// </remarks>
+        /// <param name="id">分公司id</param>
+        /// <returns></returns>
+        public BranchCompany GetBranchCompanyByID(int id)
+        {
+            try
+            {
+                return AOPFactory.CreateInstance<BranchCompanyDao>().GetBranchCompanyByID(id);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(string.Format("根据分公司id获取分公司发生异常.{0}", ex.Message));
+                return null;
+            }
+        }
+        #endregion
+
+        #region 修改分公司
+        /// <summary>
+        /// 修改分公司
+        /// </summary>
+        /// <remarks>
+        /// 创建：李真 2014-05-06
+        /// </remarks>
+        /// <param name="branchCompany">分公司实体</param>
+        /// <returns></returns>
+        public int Edit(BranchCompany branchCompany)
+        {
+            try
+            {
+                return AOPFactory.CreateInstance<BranchCompanyDao>().Update(branchCompany);
+            }
+            catch (Exception ex)
+            {
+                _logger.Error(string.Format("修改分公司发生异常.", ex.Message));
                 return -200;
             }
         }

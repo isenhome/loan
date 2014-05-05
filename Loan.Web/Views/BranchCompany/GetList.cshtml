@@ -75,7 +75,7 @@
                             }
                         </td>
                         <td>
-                            @Html.ActionLink("修改", "action")
+                            @Html.ActionLink("修改", "Edit", new { id = item.BranchCompanyID })
                             @if (item.Status == 0)
                             {
                                 @Html.ActionLink("禁用", "Lock", new { id = item.BranchCompanyID, pageindex = @Model.CurrentPageIndex })

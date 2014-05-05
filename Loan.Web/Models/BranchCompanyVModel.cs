@@ -9,6 +9,11 @@ namespace Loan.Web.Models
     public class BranchCompanyVModel
     {
         /// <summary>
+        /// 分公司ID
+        /// </summary>
+        public int branchCompanyID { get; set; }
+        
+        /// <summary>
         /// 分公司名
         /// </summary>
         [Required(ErrorMessage = "请输入分公司名称")]
