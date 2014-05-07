@@ -1,0 +1,12 @@
+
+[Header]
+2014-05-06 06:40:54
+根据分公司id获取分公司发生异常.You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.Sql' at line 1
+2014-05-06 06:42:35
+根据分公司id获取分公司发生异常.You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.Sql' at line 1
+2014-05-06 06:43:32
+根据分公司id获取分公司发生异常.You have an error in your SQL syntax; check the manual that corresponds to your MySQL server version for the right syntax to use near '.Sql' at line 1
+
+[Header]
+2014-05-06 06:45:57
+根据分公司id获取分公司发生异常.Parameter '@id' specified but none of the passed arguments have a property with this name (in 'SELECT * FROM branchcompany WHERE BranchCompanyID=@id')

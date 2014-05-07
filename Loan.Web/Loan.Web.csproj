@@ -115,6 +115,7 @@
     <Compile Include="Controllers\BranchCompanyController.cs" />
     <Compile Include="Controllers\CollectingController.cs" />
     <Compile Include="Controllers\MainPageController.cs" />
+    <Compile Include="Controllers\UsersController.cs" />
     <Compile Include="Filter\LoginFilter.cs" />
     <Compile Include="Global.asax.cs">
       <DependentUpon>Global.asax</DependentUpon>
@@ -122,6 +123,7 @@
     <Compile Include="Models\BranchCompanyVModel.cs" />
     <Compile Include="Models\ExtensionMethods\PageLinqExtensionMethods.cs" />
     <Compile Include="Models\LoginVModel.cs" />
+    <Compile Include="Models\UsersVModel.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
   </ItemGroup>
   <ItemGroup>
@@ -2315,6 +2317,9 @@
     <Content Include="Views\BranchCompany\GetList.cshtml" />
     <Content Include="Views\BranchCompany\aaa.cshtml" />
     <Content Include="Views\BranchCompany\Edit.cshtml" />
+    <Content Include="Views\Users\Add.cshtml" />
+    <Content Include="Views\Users\GetList.cshtml" />
+    <Content Include="Views\Users\Edit.cshtml" />
   </ItemGroup>
   <ItemGroup>
     <Folder Include="App_Data\" />

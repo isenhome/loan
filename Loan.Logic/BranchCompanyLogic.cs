@@ -86,9 +86,9 @@ namespace Loan.Logic
         }
         #endregion
 
-        #region 修改分公司
+        #region 根据ID获取分公司
         /// <summary>
-        /// 修改分公司
+        /// 根据ID获取分公司
         /// </summary>
         /// <remarks>
         /// 创建：李真 2014-05-06

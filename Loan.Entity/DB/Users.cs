@@ -8,9 +8,9 @@ using System.Threading.Tasks;
 namespace Loan.Entity.DB
 {
     [PetaPoco.TableName("Users")]
-    public class User
+    public class Users
     {
-        public User()
+        public Users()
         {
             this.Status = ObjectExtension.TryInt(GlobalConst.Status.Normal);
             this.CreateTime = DateTime.Now;
@@ -22,6 +22,12 @@ namespace Loan.Entity.DB
         /// </summary>
         [PetaPoco.Column]
         public int UserID { get; set; }
+
+        /// <summary>
+        /// 所属分公司ID
+        /// </summary>
+        [PetaPoco.Column]
+        public int BranchCompanyID { get; set; }
         
         /// <summary>
         /// 用户类型ID
@@ -40,6 +46,30 @@ namespace Loan.Entity.DB
         /// </summary>
         [PetaPoco.Column]
         public string Password { get; set; }
+
+        /// <summary>
+        /// 姓名
+        /// </summary>
+        [PetaPoco.Column]
+        public string RealName { get; set; }
+
+        /// <summary>
+        /// 性别
+        /// </summary>
+        [PetaPoco.Column]
+        public int Gender { get; set; }
+
+        /// <summary>
+        /// 员工编号
+        /// </summary>
+        [PetaPoco.Column]
+        public string EmployeeNO { get; set; }
+
+        /// <summary>
+        /// 手机号码
+        /// </summary>
+        [PetaPoco.Column]
+        public string Cellphone { get; set; }
         
         /// <summary>
         /// 创建时间

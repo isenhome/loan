@@ -43,7 +43,7 @@
     <Compile Include="DB\BranchCompany.cs" />
     <Compile Include="DB\Lender.cs" />
     <Compile Include="DB\LoanFile.cs" />
-    <Compile Include="DB\User.cs" />
+    <Compile Include="DB\Users.cs" />
     <Compile Include="Enum\LoanFileType.cs" />
     <Compile Include="Enum\Status.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
