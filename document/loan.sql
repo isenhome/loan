@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50616
 File Encoding         : 65001
 
-Date: 2014-05-12 21:15:23
+Date: 2014-05-12 21:51:20
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,7 +27,7 @@ CREATE TABLE `branchcompany` (
   `Description` text,
   `Status` int(11) DEFAULT '0' COMMENT '0：正常；\r\n1：禁用；\r\n2：删除；',
   PRIMARY KEY (`BranchCompanyID`)
-) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=gb2312;
+) ENGINE=InnoDB AUTO_INCREMENT=19 DEFAULT CHARSET=gb2312;
 
 -- ----------------------------
 -- Records of branchcompany
@@ -47,6 +47,60 @@ INSERT INTO `branchcompany` VALUES ('12', '分公司11', '地址11', '123456', '
 INSERT INTO `branchcompany` VALUES ('13', '分公司12', '地址12', '123456', '描述12', '0');
 INSERT INTO `branchcompany` VALUES ('14', '分公司13', '地址13', '123456', '描述13', '0');
 INSERT INTO `branchcompany` VALUES ('15', '分公司14', '地址14', '123456', '地址14', '0');
+INSERT INTO `branchcompany` VALUES ('16', '分公司15', '地址15', '123456', '分公司15', '0');
+INSERT INTO `branchcompany` VALUES ('17', '分公司16', '地址16', '123456', '分公司16', '0');
+INSERT INTO `branchcompany` VALUES ('18', '分公司17', '地址17', '123456', '藐视17', '0');
+
+-- ----------------------------
+-- Table structure for `branchcompanyuser`
+-- ----------------------------
+DROP TABLE IF EXISTS `branchcompanyuser`;
+CREATE TABLE `branchcompanyuser` (
+  `BranchCompanyUserID` int(11) NOT NULL AUTO_INCREMENT,
+  `BranchCompanyID` int(11) NOT NULL,
+  `UserID` int(11) NOT NULL,
+  PRIMARY KEY (`BranchCompanyUserID`)
+) ENGINE=InnoDB DEFAULT CHARSET=gb2312;
+
+-- ----------------------------
+-- Records of branchcompanyuser
+-- ----------------------------
+
+-- ----------------------------
+-- Table structure for `roles`
+-- ----------------------------
+DROP TABLE IF EXISTS `roles`;
+CREATE TABLE `roles` (
+  `RoleID` int(11) NOT NULL AUTO_INCREMENT,
+  `RoleName` varchar(32) NOT NULL,
+  `Status` int(11) NOT NULL DEFAULT '0',
+  PRIMARY KEY (`RoleID`)
+) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
+
+-- ----------------------------
+-- Records of roles
+-- ----------------------------
+INSERT INTO `roles` VALUES ('1', '管理员', '0');
+INSERT INTO `roles` VALUES ('2', '门店经理', '0');
+INSERT INTO `roles` VALUES ('3', '客户经理', '0');
+INSERT INTO `roles` VALUES ('4', '信申员', '0');
+INSERT INTO `roles` VALUES ('5', '信申经理', '0');
+INSERT INTO `roles` VALUES ('6', '团队经理', '0');
+
+-- ----------------------------
+-- Table structure for `userrole`
+-- ----------------------------
+DROP TABLE IF EXISTS `userrole`;
+CREATE TABLE `userrole` (
+  `UserRoleID` int(11) NOT NULL AUTO_INCREMENT,
+  `UserID` int(11) NOT NULL,
+  `RoleID` int(11) NOT NULL,
+  PRIMARY KEY (`UserRoleID`)
+) ENGINE=InnoDB DEFAULT CHARSET=gb2312;
+
+-- ----------------------------
+-- Records of userrole
+-- ----------------------------
 
 -- ----------------------------
 -- Table structure for `users`
@@ -54,8 +108,6 @@ INSERT INTO `branchcompany` VALUES ('15', '分公司14', '地址14', '123456', '
 DROP TABLE IF EXISTS `users`;
 CREATE TABLE `users` (
   `userID` int(11) NOT NULL AUTO_INCREMENT,
-  `branchCompanyID` int(11) DEFAULT NULL COMMENT '所属分公司ID',
-  `userTypeID` int(11) NOT NULL COMMENT '用户类型ID',
   `userName` varchar(32) NOT NULL,
   `password` varchar(32) NOT NULL DEFAULT '123456',
   `realName` varchar(16) DEFAULT NULL,
@@ -65,32 +117,10 @@ CREATE TABLE `users` (
   `createTime` datetime NOT NULL,
   `updateTime` datetime NOT NULL,
   `status` int(11) NOT NULL DEFAULT '0' COMMENT '0：正常；\r\n1：禁用；\r\n2：删除；',
-  PRIMARY KEY (`userID`),
-  KEY `userType` (`userTypeID`)
+  PRIMARY KEY (`userID`)
 ) ENGINE=InnoDB AUTO_INCREMENT=2 DEFAULT CHARSET=utf8;
 
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', '1', '1', 'pkwblack', 'nihaoma', null, null, null, null, '2014-03-23 14:23:58', '2014-03-23 14:24:09', '0');
-
--- ----------------------------
--- Table structure for `usertype`
--- ----------------------------
-DROP TABLE IF EXISTS `usertype`;
-CREATE TABLE `usertype` (
-  `typeID` int(11) NOT NULL AUTO_INCREMENT,
-  `typeName` varchar(32) NOT NULL,
-  `status` int(11) NOT NULL DEFAULT '0',
-  PRIMARY KEY (`typeID`)
-) ENGINE=InnoDB AUTO_INCREMENT=7 DEFAULT CHARSET=utf8;
-
--- ----------------------------
--- Records of usertype
--- ----------------------------
-INSERT INTO `usertype` VALUES ('1', '管理员', '0');
-INSERT INTO `usertype` VALUES ('2', '门店经理', '0');
-INSERT INTO `usertype` VALUES ('3', '客户经理', '0');
-INSERT INTO `usertype` VALUES ('4', '信申员', '0');
-INSERT INTO `usertype` VALUES ('5', '信申经理', '0');
-INSERT INTO `usertype` VALUES ('6', '团队经理', '0');
+INSERT INTO `users` VALUES ('1', 'pkwblack', 'nihaoma', null, null, null, null, '2014-03-23 14:23:58', '2014-03-23 14:24:09', '0');
