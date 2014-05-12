@@ -62,7 +62,7 @@ namespace Loan.Web.Controllers
                     branchCompanyV.Description = string.Empty;
                 }
             }
-            return View(branchCompanyV);
+            return View(new BranchCompanyVModel());
         }
         #endregion
 
@@ -100,7 +100,7 @@ namespace Loan.Web.Controllers
         /// <param name="id">分公司ID</param>
         /// <param name="pageindex">列表当前页码</param>
         /// <returns></returns>
-        [HttpPost]
+        //[HttpPost]
         public ActionResult Lock(int id, int pageindex)
         {
             int result = branchCompanyLogic.ChangeStatus(id, GlobalConst.Status.Locked);
@@ -152,11 +152,12 @@ namespace Loan.Web.Controllers
         /// </summary>
         /// <remarks>
         /// 创建：李真 2014-05-05
+        /// 修改：Jesse 2014-05-12
         /// </remarks>
         /// <param name="id">分公司ID</param>
         /// <param name="pageindex">列表当前页码</param>
         /// <returns></returns>
-        [HttpPost]
+        //[HttpPost]
         public ActionResult Delete(int id, int pageindex)
         {
             int result = branchCompanyLogic.ChangeStatus(id, GlobalConst.Status.Normal);
