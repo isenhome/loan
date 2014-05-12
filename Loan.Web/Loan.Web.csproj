@@ -2315,7 +2315,6 @@
     <Content Include="Views\MainPage\Index_Horizontal.cshtml" />
     <Content Include="Views\BranchCompany\Add.cshtml" />
     <Content Include="Views\BranchCompany\GetList.cshtml" />
-    <Content Include="Views\BranchCompany\aaa.cshtml" />
     <Content Include="Views\BranchCompany\Edit.cshtml" />
     <Content Include="Views\Users\Add.cshtml" />
     <Content Include="Views\Users\GetList.cshtml" />

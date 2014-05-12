@@ -56,7 +56,10 @@ namespace Loan.Web.Controllers
                 { 
                     //新增成功
                     ViewBag.AlertMessage = "新增成功";
-                    return View(new BranchCompanyVModel());
+                    branchCompanyV.Name = string.Empty;
+                    branchCompanyV.Address = string.Empty;
+                    branchCompanyV.PostCode = string.Empty;
+                    branchCompanyV.Description = string.Empty;
                 }
             }
             return View(branchCompanyV);
