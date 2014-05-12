@@ -10,7 +10,7 @@ Target Server Type    : MYSQL
 Target Server Version : 50616
 File Encoding         : 65001
 
-Date: 2014-04-23 07:14:11
+Date: 2014-05-12 21:15:23
 */
 
 SET FOREIGN_KEY_CHECKS=0;
@@ -27,7 +27,7 @@ CREATE TABLE `branchcompany` (
   `Description` text,
   `Status` int(11) DEFAULT '0' COMMENT '0：正常；\r\n1：禁用；\r\n2：删除；',
   PRIMARY KEY (`BranchCompanyID`)
-) ENGINE=InnoDB AUTO_INCREMENT=14 DEFAULT CHARSET=gb2312;
+) ENGINE=InnoDB AUTO_INCREMENT=16 DEFAULT CHARSET=gb2312;
 
 -- ----------------------------
 -- Records of branchcompany
@@ -45,6 +45,8 @@ INSERT INTO `branchcompany` VALUES ('10', '分公司9', '地址9', '123456', '�
 INSERT INTO `branchcompany` VALUES ('11', '分公司10', '地址10', '123456', '描述10', '0');
 INSERT INTO `branchcompany` VALUES ('12', '分公司11', '地址11', '123456', '描述11', '0');
 INSERT INTO `branchcompany` VALUES ('13', '分公司12', '地址12', '123456', '描述12', '0');
+INSERT INTO `branchcompany` VALUES ('14', '分公司13', '地址13', '123456', '描述13', '0');
+INSERT INTO `branchcompany` VALUES ('15', '分公司14', '地址14', '123456', '地址14', '0');
 
 -- ----------------------------
 -- Table structure for `users`
@@ -55,7 +57,11 @@ CREATE TABLE `users` (
   `branchCompanyID` int(11) DEFAULT NULL COMMENT '所属分公司ID',
   `userTypeID` int(11) NOT NULL COMMENT '用户类型ID',
   `userName` varchar(32) NOT NULL,
-  `password` varchar(32) NOT NULL,
+  `password` varchar(32) NOT NULL DEFAULT '123456',
+  `realName` varchar(16) DEFAULT NULL,
+  `gender` int(11) DEFAULT NULL,
+  `employeeNO` varchar(32) DEFAULT NULL,
+  `cellphone` varchar(11) DEFAULT NULL,
   `createTime` datetime NOT NULL,
   `updateTime` datetime NOT NULL,
   `status` int(11) NOT NULL DEFAULT '0' COMMENT '0：正常；\r\n1：禁用；\r\n2：删除；',
@@ -66,7 +72,7 @@ CREATE TABLE `users` (
 -- ----------------------------
 -- Records of users
 -- ----------------------------
-INSERT INTO `users` VALUES ('1', '1', '1', 'pkwblack', 'nihaoma', '2014-03-23 14:23:58', '2014-03-23 14:24:09', '0');
+INSERT INTO `users` VALUES ('1', '1', '1', 'pkwblack', 'nihaoma', null, null, null, null, '2014-03-23 14:23:58', '2014-03-23 14:24:09', '0');
 
 -- ----------------------------
 -- Table structure for `usertype`
