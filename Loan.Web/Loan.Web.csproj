@@ -2024,6 +2024,7 @@
     <Content Include="Content\themes\base\images\ui-icons_cd0a0a_256x240.png" />
     <Content Include="Content\themes\base\jquery-ui.css" />
     <Content Include="Global.asax" />
+    <Content Include="Scripts\form.js" />
     <Content Include="Scripts\ValidationSummary.js" />
     <Content Include="App_Config\appSettings.config" />
     <Content Include="App_Config\Log4Net.config" />

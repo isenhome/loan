@@ -1,0 +1,11 @@
+
+[Header]
+2014-05-12 21:08:50
+根据userid获取用户发生异常.Parameter '@id' specified but none of the passed arguments have a property with this name (in 'SELECT * FROM users WHERE userID=@id')
+[Footer]
+
+[Header]
+[Footer]
+
+[Header]
+[Footer]
